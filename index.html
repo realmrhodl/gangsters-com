@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-<meta name="theme-color" content="#09080d" />
+<meta name="theme-color" content="#070707" />
 <title>Gangsters: The American Dream — Build your empire. Take California.</title>
 <meta name="description" content="Build your criminal empire and take over California. Play as a criminal, dirty cop or rogue scientist. Coming December 27, 2027 for iPhone, iPhone Duo &amp; iPad." />
 <meta property="og:type" content="website" />
@@ -22,611 +22,540 @@
 <meta name="twitter:image" content="https://gangsters.com/og.jpg" />
 <link rel="canonical" href="https://gangsters.com/" />
 <link rel="icon" href="favicon.ico" sizes="any" />
-<link rel="preload" as="image" href="assets/logo-1200.webp" type="image/webp" />
+<link rel="preload" as="image" href="assets/logo-red-1200.webp" type="image/webp" />
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"VideoGame","name":"Gangsters","alternateName":"Gangsters: The American Dream","url":"https://gangsters.com/","image":"https://gangsters.com/og.jpg","description":"Build your criminal empire and take over California. Steal cars, pull heists, run a crime family and own poker rooms, nightclubs and underground businesses. Play as a criminal, dirty cop or rogue scientist and make your way to the top. Stack cash and diamonds. Buy supercars, yachts and mansions. Control territory, build your reputation and become California's most powerful gangster.","genre":["Role-playing","Strategy","Social"],"gamePlatform":["iPhone","iPhone Duo","iPad"],"operatingSystem":"iOS","playMode":"MultiPlayer","datePublished":"2027-12-27","publisher":{"@type":"Organization","name":"ForYouGaming Inc.","url":"https://foryougaming.com"}}
 </script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&display=swap" rel="stylesheet">
 <style>
 :root{
-  --night:#09080d;--night-2:#111016;--night-3:#17141d;--night-4:#1e1a25;
-  --line:rgba(255,232,210,.09);--line-hi:rgba(255,232,210,.18);
-  --white:#fffaf5;--lav:#c9c0cb;--lav-dim:#8c8490;--faint:#69626d;
-  --pink:#d85d7d;--pink-hi:#ee8c9e;--peach:#e7b17d;--gold:#d8ae79;--gold-hi:#f0d0a4;
-  --cop:#7d9be0;--sci:#7fd8b8;
-  --grad-sunset:linear-gradient(100deg,#b94f68 0%,#d9786f 48%,#e4b17f 100%);
-  --grad-text:linear-gradient(95deg,#ee8c9e 0%,#e7b17d 55%,#f0d0a4 100%);
-  --shadow-lg:0 50px 120px rgba(6,3,12,.6);
-  --ease:cubic-bezier(.16,.8,.28,1);
-  --font:"Outfit",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
-  --mono:"Space Mono",ui-monospace,Menlo,monospace;
-  --wrap:min(1200px,calc(100% - 40px));
+  --bg:#070707;--p:#0e0e0e;--p2:#131313;--p3:#1a1a1a;--ln:#262626;--ln2:#353535;
+  --red:#c41e3a;--red-d:#9b111e;--red-dd:#4a0810;--red-hi:#ff2a2a;
+  --tx:#d9d9d9;--dim:#8e8e8e;--faint:#5f5f5f;--wh:#fff;
+  --hd:"Oswald","Arial Narrow",Impact,sans-serif;
+  --bd:Verdana,Geneva,Tahoma,sans-serif;
+  --wrap:min(1180px,calc(100% - 24px));
 }
 *{box-sizing:border-box}
-html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
-@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important}}
-body{margin:0;color:var(--white);background:var(--night);font-family:var(--font);overflow-x:hidden;-webkit-font-smoothing:antialiased;font-size:16px;line-height:1.6}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth;scroll-padding-top:70px}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{animation:none!important;transition:none!important}}
+body{margin:0;background:var(--bg);color:var(--tx);font:13px/1.55 var(--bd);overflow-x:hidden}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;z-index:0;
+  background:radial-gradient(120% 70% at 50% -10%,rgba(155,17,30,.28),transparent 60%),radial-gradient(140% 100% at 50% 50%,transparent 55%,rgba(0,0,0,.85))}
+body:after{content:"";position:fixed;inset:0;pointer-events:none;z-index:0;opacity:.07;
+  background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 160 160' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+body>*{position:relative;z-index:1}
 img,svg{display:block;max-width:100%}
-a{color:inherit;text-decoration:none}
+a{color:var(--wh);text-decoration:none}
+a:hover{color:var(--red-hi)}
 button,input,select{font:inherit;color:inherit}
-::selection{background:var(--pink);color:#fff}
-:focus-visible{outline:2px solid var(--pink-hi);outline-offset:3px;border-radius:6px}
+::selection{background:var(--red);color:#fff}
+:focus-visible{outline:2px solid var(--red-hi);outline-offset:2px}
 .sr{position:absolute!important;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
-.skip{position:fixed;left:12px;top:-60px;z-index:200;padding:10px 16px;border-radius:10px;background:var(--gold-hi);color:#2a0c1e;font-weight:800}
-.skip:focus{top:12px}
-.grain{position:fixed;inset:0;pointer-events:none;z-index:90;opacity:.055;mix-blend-mode:overlay;
-  background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.7'/%3E%3C/svg%3E")}
+.skip{position:fixed;left:8px;top:-50px;z-index:300;background:var(--red);color:#fff;padding:8px 12px;font-weight:700}
+.skip:focus{top:8px}
 .wrap{width:var(--wrap);margin:0 auto}
-.mono{font-family:var(--mono)}
-.eyebrow{font-family:var(--mono);font-weight:700;font-size:11.5px;letter-spacing:.24em;text-transform:uppercase;color:var(--pink-hi);display:flex;align-items:center;gap:12px;margin:0}
-.eyebrow:before{content:"";width:28px;height:1px;background:currentColor;opacity:.6}
-.h2{margin:14px 0 0;font-weight:800;font-size:clamp(34px,5.4vw,72px);line-height:.98;letter-spacing:-.035em;text-wrap:balance}
-.h2 em{font-style:normal;background:var(--grad-text);-webkit-background-clip:text;background-clip:text;color:transparent}
-.lede{margin:18px 0 0;max-width:560px;color:var(--lav);font-size:clamp(15px,1.4vw,18px);line-height:1.6}
-.sec{position:relative;padding:clamp(90px,12vw,160px) 0}
-.sec-head{display:flex;justify-content:space-between;align-items:flex-end;gap:30px;flex-wrap:wrap;margin-bottom:clamp(40px,6vw,70px)}
-.rv{opacity:0;transform:translateY(26px);transition:opacity .9s var(--ease),transform .9s var(--ease)}
-.rv.in{opacity:1;transform:none}
-.rv[data-d="1"]{transition-delay:.08s}.rv[data-d="2"]{transition-delay:.16s}.rv[data-d="3"]{transition-delay:.24s}
-@media (prefers-reduced-motion:reduce){.rv{opacity:1;transform:none}}
-.btn{position:relative;display:inline-flex;align-items:center;justify-content:center;gap:10px;cursor:pointer;border-radius:14px;padding:17px 34px;font-weight:800;font-size:15px;letter-spacing:.01em;
-  border:1px solid rgba(240,208,164,.55);background:linear-gradient(180deg,rgba(31,26,31,.94),rgba(17,15,19,.96));color:#f5dfc1;
-  box-shadow:0 16px 42px rgba(0,0,0,.32),inset 0 1px 0 rgba(255,255,255,.05);transition:transform .25s var(--ease),box-shadow .25s var(--ease),border-color .25s}
-.btn:hover{transform:translateY(-2px);border-color:rgba(240,208,164,.95);box-shadow:0 20px 54px rgba(0,0,0,.42),0 0 0 5px rgba(216,174,121,.08)}
-.btn:active{transform:translateY(0)}
-.btn svg{width:16px;height:16px;transition:transform .25s var(--ease)}
-.btn:hover svg{transform:translateX(3px)}
-.btn-sun{border:0;background:var(--grad-sunset);color:#2a0c1e;box-shadow:0 18px 46px rgba(216,93,125,.35),inset 0 1px 0 rgba(255,255,255,.35)}
-.btn-sun:hover{box-shadow:0 24px 60px rgba(216,93,125,.45),0 0 0 5px rgba(238,140,158,.12)}
-.btn-ghost{background:rgba(10,8,12,.35);border-color:rgba(255,235,215,.2);color:var(--white);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
-.btn-sm{padding:10px 18px;font-size:13px;border-radius:11px}
-/* header */
-.hdr{position:fixed;top:0;left:0;right:0;z-index:80;padding:calc(14px + env(safe-area-inset-top,0px)) 20px 14px;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:12px}
-.hdr:before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(9,8,13,.88),rgba(9,8,13,.74));backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border-bottom:1px solid var(--line);opacity:0;transition:opacity .4s}
-.hdr.solid:before{opacity:1}
-.hdr-logo,.hdr-right>*{opacity:0;transform:translateY(-6px);transition:opacity .4s,transform .4s var(--ease);pointer-events:none}
-.hdr-logo{justify-self:start}
-.hdr-logo img{height:28px;width:auto}
-.hdr.solid .hdr-logo,.hdr.solid .hdr-right>*{opacity:1;transform:none;pointer-events:auto}
-.hdr-right{justify-self:end;display:flex;align-items:center;gap:26px}
-.hdr-nav{display:none;gap:24px;font-size:13px;font-weight:600;color:var(--lav)}
-.hdr-nav a:hover{color:var(--white)}
-@media(min-width:1040px){.hdr-nav{display:flex}}
-.la{display:flex;align-items:center;gap:10px;padding:9px 15px;border-radius:999px;border:1px solid rgba(255,235,215,.12);background:rgba(10,8,12,.42);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);
-  font-family:var(--mono);font-weight:700;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,245,236,.82);white-space:nowrap;box-shadow:0 10px 30px rgba(0,0,0,.18);opacity:0;animation:enter .8s var(--ease) .5s forwards;transition:opacity .3s}
-.la-city{color:var(--gold-hi)}
-.la-dot{width:6px;height:6px;border-radius:50%;background:#ff5a5f;animation:live 2s ease-out infinite}
-@keyframes live{0%{box-shadow:0 0 0 0 rgba(255,90,95,.55)}70%,100%{box-shadow:0 0 0 7px rgba(255,90,95,0)}}
-.la-sep{width:1px;height:11px;background:rgba(255,235,215,.22)}
-.la-wx{display:inline-flex;align-items:center;gap:7px}
-.la-wx[hidden]{display:none}
-#laIcon svg{width:14px;height:14px}
-@media(max-width:720px){
-  .hdr{padding:calc(10px + env(safe-area-inset-top,0px)) 14px 10px;grid-template-columns:1fr auto}
-  .la{grid-column:1/-1;grid-row:1;justify-self:center;font-size:10px;gap:8px;padding:8px 12px;letter-spacing:.1em}
-  .hdr-logo{grid-column:1;grid-row:1}
-  .hdr-right{grid-column:2;grid-row:1}
-  .hdr.solid .la{opacity:0!important;animation:none;pointer-events:none}
-  .hdr-logo img{height:22px}
-  .hdr .btn-sm{padding:9px 14px;font-size:12.5px;box-shadow:0 8px 24px rgba(216,93,125,.3)}
-}
-/* hero */
-.hero{position:relative;min-height:100svh;display:grid;place-items:center;overflow:hidden;isolation:isolate;padding:110px 22px 120px}
-.photo{position:absolute;inset:-4% -4% -20%;z-index:-5;will-change:transform}
-.photo-in{position:absolute;inset:0;background:#1a0f12 center 62%/cover no-repeat;background-image:url("assets/bg.jpg");background-image:image-set(url("assets/bg.webp") type("image/webp"),url("assets/bg.jpg") type("image/jpeg"));animation:drift 30s ease-in-out infinite alternate}
-@keyframes drift{from{transform:scale(1.03)}to{transform:scale(1.1) translateY(-1%)}}
-@media(max-width:720px){.photo-in{background-image:url("assets/bg-mobile.webp");background-position:center 55%}}
-.shade{position:absolute;inset:0;z-index:-4;background:
-  radial-gradient(58% 44% at 50% 46%,rgba(8,6,10,.62) 0%,rgba(8,6,10,.36) 55%,rgba(8,6,10,0) 100%),
-  linear-gradient(180deg,rgba(8,6,10,.6) 0%,rgba(8,6,10,.16) 26%,rgba(8,6,10,.22) 58%,rgba(9,8,13,1) 100%)}
-.vignette{position:absolute;inset:0;z-index:-3;box-shadow:inset 0 0 220px rgba(0,0,0,.55);pointer-events:none}
-.flare{position:absolute;right:-10%;top:6%;width:60vw;height:60vw;max-width:900px;max-height:900px;z-index:-3;border-radius:50%;background:radial-gradient(circle,rgba(240,170,110,.16),transparent 60%);mix-blend-mode:screen;pointer-events:none;animation:flare 14s ease-in-out infinite alternate}
-@keyframes flare{to{transform:translate(-4%,3%) scale(1.08);opacity:.7}}
-.hero-inner{text-align:center;max-width:820px;opacity:0;transform:translateY(18px);animation:enter 1.1s var(--ease) .15s forwards}
-@keyframes enter{to{opacity:1;transform:none}}
-.hero h1{margin:0}
-.logo{width:min(600px,86vw);height:auto;margin:0 auto;filter:drop-shadow(0 14px 36px rgba(0,0,0,.5))}
-.tag{margin:20px 0 0;font-family:var(--mono);font-weight:700;font-size:clamp(11px,1.4vw,14px);letter-spacing:.32em;text-transform:uppercase;color:rgba(242,214,187,.9);text-shadow:0 2px 14px rgba(0,0,0,.45);display:flex;align-items:center;justify-content:center;gap:14px}
-.tag:before,.tag:after{content:"";width:clamp(20px,5vw,56px);height:1px;background:linear-gradient(90deg,transparent,rgba(240,208,164,.7))}
-.tag:after{transform:scaleX(-1)}
-.sub{margin:22px auto 0;max-width:560px;color:rgba(255,250,245,.96);font-size:clamp(18px,2.1vw,24px);font-weight:600;line-height:1.35;letter-spacing:-.01em;text-shadow:0 1px 14px rgba(0,0,0,.6);text-wrap:balance}
-.sub2{margin:10px 0 0;font-size:clamp(13px,1.3vw,15.5px);font-weight:500;font-style:italic;color:rgba(242,214,187,.9);text-shadow:0 1px 12px rgba(0,0,0,.55)}
-.hero-ctas{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:34px}
-.hero-meta{margin-top:22px;display:flex;flex-direction:column;align-items:center;gap:8px}
-.date-chip{font-family:var(--mono);font-size:11.5px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--gold-hi);text-shadow:0 1px 10px rgba(0,0,0,.6)}
-.ios{display:flex;align-items:center;justify-content:center;gap:7px;font-size:12px;color:rgba(255,246,238,.72);font-weight:600;text-shadow:0 1px 10px rgba(0,0,0,.55)}
-.ios svg{width:13px;height:13px}
-.scroll-cue{position:absolute;left:50%;bottom:calc(24px + env(safe-area-inset-bottom,0px));transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:10px;font-family:var(--mono);font-size:10px;letter-spacing:.3em;text-transform:uppercase;color:rgba(255,245,236,.55)}
-.scroll-cue i{width:1px;height:42px;background:linear-gradient(180deg,rgba(240,208,164,.8),transparent);animation:cue 2.4s var(--ease) infinite;transform-origin:top}
-@keyframes cue{0%{transform:scaleY(0)}50%{transform:scaleY(1)}100%{transform:scaleY(1);opacity:0}}
-@media(max-width:720px){
-  .hero{padding:84px 18px 104px}
-  .logo{width:min(340px,84vw)}
-  .tag{font-size:10px;letter-spacing:.24em;margin-top:16px}
-  .sub{font-size:17px;max-width:330px}
-  .hero-ctas{margin-top:28px}
-  .hero-ctas .btn{width:min(320px,100%)}
-}
-/* ticker */
-.ticker{position:relative;border-block:1px solid var(--line);background:linear-gradient(90deg,rgba(185,79,104,.08),rgba(228,177,127,.08));overflow:hidden;padding:18px 0}
-.ticker-track{display:flex;width:max-content;animation:tick 48s linear infinite;font-family:var(--mono);font-weight:700;font-size:12.5px;letter-spacing:.24em;text-transform:uppercase;color:rgba(255,245,236,.72);white-space:nowrap}
-.ticker-track span{display:inline-flex;align-items:center;gap:40px;padding-right:40px}
-.ticker-track span:after{content:"✦";color:var(--pink-hi);font-size:10px}
-@keyframes tick{to{transform:translateX(-50%)}}
-/* roles */
-.roles-sec{background:radial-gradient(70% 50% at 50% 0%,rgba(216,93,125,.09),transparent 70%)}
-.roles-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-.rc{--acc:var(--pink-hi);--acc2:var(--gold-hi);--accl:rgba(238,140,158,.4);position:relative;min-height:580px;border-radius:26px;overflow:hidden;isolation:isolate;border:1px solid var(--line-hi);background:var(--night-2);padding:30px;display:flex;flex-direction:column;
-  transition:transform .5s var(--ease),border-color .4s,box-shadow .5s var(--ease),opacity .9s var(--ease)}
-.rc:hover{transform:translateY(-6px);border-color:var(--accl);box-shadow:0 40px 90px rgba(0,0,0,.5)}
-.rc-bg{position:absolute;inset:0;z-index:-3;transition:transform 1.2s var(--ease)}
-.rc:hover .rc-bg{transform:scale(1.06)}
-.rc-glow{position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(9,8,13,0) 0%,rgba(9,8,13,.5) 44%,rgba(9,8,13,.96) 76%)}
-.rc-emblem{position:absolute;top:56px;left:50%;transform:translateX(-50%);width:62%;max-width:230px;z-index:-2;filter:drop-shadow(0 20px 40px rgba(0,0,0,.5));transition:transform .8s var(--ease)}
-.rc:hover .rc-emblem{transform:translateX(-50%) translateY(-6px) rotate(-3deg)}
-.rc-num{font-family:var(--mono);font-size:11px;font-weight:700;letter-spacing:.2em;color:var(--acc);text-transform:uppercase;display:flex;justify-content:space-between;gap:10px}
-.rc-num span:last-child{color:rgba(255,245,236,.45)}
-.rc-body{margin-top:auto}
-.rc h3{margin:0;font-size:clamp(34px,3.4vw,44px);font-weight:800;letter-spacing:-.03em;line-height:1}
-.rc-line{margin:10px 0 0;font-size:17px;font-weight:600;color:var(--acc2);line-height:1.35}
-.rc ul{list-style:none;padding:0;margin:18px 0 0;display:grid;gap:9px}
-.rc li{display:flex;gap:11px;align-items:flex-start;font-size:14.5px;color:var(--lav);line-height:1.45}
-.rc li:before{content:"";flex:none;width:6px;height:6px;margin-top:8px;transform:rotate(45deg);background:var(--acc)}
-.rc-quote{margin:16px 0 0;font-family:var(--mono);font-size:12px;font-style:italic;color:rgba(255,245,236,.5)}
-.rc .btn{margin-top:22px;width:100%;justify-content:space-between;border-color:var(--accl);color:var(--white)}
-.rc .btn:hover{border-color:var(--acc)}
-.rc-crim .rc-bg{background:radial-gradient(90% 60% at 50% 18%,rgba(216,93,125,.55),transparent 70%),radial-gradient(60% 40% at 80% 40%,rgba(231,177,125,.25),transparent 70%),linear-gradient(180deg,#2a1420,#110c12)}
-.rc-cop{--acc:var(--cop);--acc2:#c3d1f4;--accl:rgba(125,155,224,.45)}
-.rc-cop .rc-bg{background:radial-gradient(70% 50% at 20% 10%,rgba(95,130,230,.45),transparent 65%),radial-gradient(70% 50% at 85% 12%,rgba(255,80,90,.32),transparent 65%),linear-gradient(180deg,#141a2c,#0c0c13)}
-.siren{position:absolute;inset:0;z-index:-2;pointer-events:none;opacity:0;transition:opacity .4s}
-.siren:before,.siren:after{content:"";position:absolute;top:-20%;width:70%;height:60%;border-radius:50%;filter:blur(30px)}
-.siren:before{left:-20%;background:rgba(80,120,255,.55);animation:sirenA 1.1s steps(1) infinite}
-.siren:after{right:-20%;background:rgba(255,60,70,.5);animation:sirenB 1.1s steps(1) infinite}
-@keyframes sirenA{50%{opacity:.1}}@keyframes sirenB{0%{opacity:.1}50%{opacity:1}}
-.rc-cop:hover .siren{opacity:1}
-.rc-sci{--acc:var(--sci);--acc2:#c9f2e2;--accl:rgba(127,216,184,.4)}
-.rc-sci .rc-bg{background:radial-gradient(80% 55% at 50% 20%,rgba(90,210,170,.34),transparent 68%),radial-gradient(60% 40% at 20% 50%,rgba(216,174,121,.16),transparent 70%),linear-gradient(180deg,#0f1f1c,#0b0c10)}
-.bubble{animation:bub 3.4s ease-in infinite}
-.bubble:nth-of-type(2){animation-delay:1.1s}.bubble:nth-of-type(3){animation-delay:2.2s}
-@keyframes bub{0%{transform:translateY(0);opacity:0}20%{opacity:1}100%{transform:translateY(-46px);opacity:0}}
-@media(max-width:980px){.roles-grid{grid-template-columns:1fr;gap:16px}.rc{min-height:520px}.rc-emblem{max-width:190px;top:50px}}
-/* rise */
-.rise{position:relative;overflow:hidden;isolation:isolate;padding:clamp(100px,14vw,180px) 0}
-.rise-photo{position:absolute;inset:-15% 0;z-index:-2;background:#1a0f12 center 40%/cover no-repeat;background-image:url("assets/bg.jpg");background-image:image-set(url("assets/bg.webp") type("image/webp"),url("assets/bg.jpg") type("image/jpeg"));will-change:transform}
-.rise:before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,var(--night) 0%,rgba(9,8,13,.7) 22%,rgba(9,8,13,.78) 78%,var(--night) 100%),linear-gradient(90deg,rgba(9,8,13,.88),rgba(9,8,13,.25))}
-.rise-steps{margin-top:60px;display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--line-hi)}
-.step{padding:26px 24px 0 0;position:relative}
-.step:before{content:"";position:absolute;top:-5px;left:0;width:9px;height:9px;border-radius:50%;background:var(--gold-hi);box-shadow:0 0 0 5px rgba(240,208,164,.15)}
-.step .mono{font-size:11px;letter-spacing:.22em;color:var(--pink-hi);font-weight:700}
-.step h3{margin:8px 0 6px;font-size:26px;font-weight:800;letter-spacing:-.02em}
-.step p{margin:0;color:var(--lav);font-size:14.5px;line-height:1.5;max-width:250px}
-@media(max-width:820px){.rise-steps{grid-template-columns:1fr 1fr;row-gap:36px}}
-@media(max-width:480px){.rise-steps{grid-template-columns:1fr;border-top:0;border-left:1px solid var(--line-hi);padding-left:24px;row-gap:30px}.step{padding:0}.step:before{left:-29px;top:6px}}
-/* systems */
-.sys-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:26px;overflow:hidden}
-.sys{position:relative;background:var(--night);padding:34px 28px 36px;min-height:270px;display:flex;flex-direction:column}
-.sys:before{content:"";position:absolute;inset:0;background:radial-gradient(80% 60% at 30% 0%,rgba(216,93,125,.16),transparent 70%);opacity:0;transition:opacity .5s}
-.sys:hover:before{opacity:1}
-.sys-ic{width:50px;height:50px;border-radius:14px;display:grid;place-items:center;border:1px solid rgba(240,208,164,.22);background:linear-gradient(180deg,rgba(240,208,164,.09),rgba(240,208,164,.02));position:relative;transition:transform .5s var(--ease)}
-.sys:hover .sys-ic{transform:translateY(-3px)}
-.sys-ic svg{width:26px;height:26px}
-.sys .mono{position:absolute;top:30px;right:26px;font-size:11px;color:var(--faint);letter-spacing:.14em}
-.sys h3{margin:auto 0 0;padding-top:34px;font-size:21px;font-weight:700;letter-spacing:-.015em;position:relative}
-.sys p{margin:8px 0 0;color:var(--lav-dim);font-size:14.5px;line-height:1.5;position:relative;transition:color .3s}
-.sys:hover p{color:var(--lav)}
-@media(max-width:1000px){.sys-grid{grid-template-columns:repeat(2,1fr)}}
-@media(max-width:560px){.sys-grid{grid-template-columns:1fr}.sys{min-height:0;padding:26px 22px}.sys h3{padding-top:20px}}
-/* map */
-.map-sec{background:radial-gradient(60% 60% at 25% 50%,rgba(231,177,125,.07),transparent 70%)}
-.map-wrap{display:grid;grid-template-columns:1fr 1fr;gap:clamp(30px,5vw,80px);align-items:center}
-.map{position:relative;width:100%;max-width:540px;justify-self:center}
-.map svg{width:100%;height:auto;overflow:visible}
-.ca{fill:url(#caFill);stroke:rgba(240,208,164,.5);stroke-width:1.2;stroke-linejoin:round;filter:drop-shadow(0 30px 60px rgba(216,93,125,.15))}
-.ca-grid{stroke:rgba(255,232,210,.06);stroke-width:1}
-.route{fill:none;stroke:url(#routeG);stroke-width:1.2;stroke-dasharray:3 5;opacity:.55;animation:dash 30s linear infinite}
-@keyframes dash{to{stroke-dashoffset:-400}}
-.pin{cursor:pointer;outline:none}
-.pin .r{fill:var(--gold-hi);transition:fill .3s}
-.pin .halo{fill:none;stroke:var(--pink-hi);stroke-width:1.4;opacity:0;transform-box:fill-box;transform-origin:center}
-.pin .lbl{font-family:var(--mono);font-size:10.5px;font-weight:700;letter-spacing:.1em;fill:rgba(255,245,236,.62);text-transform:uppercase;transition:fill .3s;pointer-events:none;paint-order:stroke;stroke:rgba(9,8,13,.8);stroke-width:3px}
-.pin:hover .lbl,.pin.on .lbl,.pin:focus-visible .lbl{fill:var(--white)}
-.pin:hover .r{fill:var(--white)}
-.pin.on .r{fill:var(--pink-hi)}
-.pin.on .halo{opacity:1;animation:halo 2s ease-out infinite}
-.pin:focus-visible .halo{opacity:1;stroke:var(--gold-hi)}
-@keyframes halo{from{transform:scale(.6);opacity:1}to{transform:scale(2.6);opacity:0}}
-.city-list{list-style:none;margin:34px 0 0;padding:0;border-top:1px solid var(--line)}
-.city{border-bottom:1px solid var(--line)}
-.city button{all:unset;box-sizing:border-box;cursor:pointer;width:100%;display:grid;grid-template-columns:30px 1fr auto;align-items:center;gap:14px;padding:15px 4px;transition:padding .35s var(--ease)}
-.city button:focus-visible{outline:2px solid var(--pink-hi);outline-offset:2px;border-radius:8px}
-.city .n{font-family:var(--mono);font-size:11px;color:var(--faint)}
-.city strong{font-size:clamp(19px,2vw,24px);font-weight:700;letter-spacing:-.015em;transition:color .3s}
-.city .fl{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--lav-dim);transition:color .3s;text-align:right}
-.city button:hover strong{color:var(--gold-hi)}
-.city.on button{padding-left:14px}
-.city.on strong{background:var(--grad-text);-webkit-background-clip:text;background-clip:text;color:transparent}
-.city.on .fl{color:var(--pink-hi)}
-.city-detail{margin-top:26px;padding:22px 24px;border-radius:20px;border:1px solid var(--line-hi);background:linear-gradient(180deg,var(--night-3),var(--night-2));display:flex;gap:18px;align-items:center;justify-content:space-between;flex-wrap:wrap}
-.city-detail p{margin:0;color:var(--lav);font-size:15px;line-height:1.5;flex:1 1 220px}
-.city-detail p b{display:block;color:var(--white);font-size:17px;margin-bottom:3px}
-@media(max-width:900px){.map-wrap{grid-template-columns:1fr}.map{max-width:400px;order:2}}
-/* countdown */
-.cd-sec{text-align:center;border-block:1px solid var(--line);background:radial-gradient(60% 80% at 50% 100%,rgba(216,93,125,.13),transparent 70%),var(--night)}
-.cd-sec .eyebrow{justify-content:center}
-.cd{display:flex;justify-content:center;gap:clamp(8px,2.4vw,28px);margin-top:46px}
-.cd-u{flex:0 1 190px;min-width:0;padding:clamp(16px,2.4vw,30px) clamp(4px,1.6vw,20px);border-radius:clamp(14px,2vw,22px);border:1px solid var(--line-hi);background:linear-gradient(180deg,rgba(255,250,245,.045),rgba(255,250,245,.01));position:relative;overflow:hidden}
-.cd-u:first-child{flex-basis:240px}
-.cd-u:after{content:"";position:absolute;left:0;right:0;top:50%;height:1px;background:rgba(0,0,0,.45)}
-.cd-v{display:block;font-family:var(--mono);font-weight:700;font-size:clamp(30px,6.4vw,88px);line-height:1;letter-spacing:-.05em;background:linear-gradient(180deg,#fffaf5 30%,#f0d0a4);-webkit-background-clip:text;background-clip:text;color:transparent;font-variant-numeric:tabular-nums}
-.cd-l{display:block;margin-top:12px;font-family:var(--mono);font-size:clamp(9px,1vw,11px);letter-spacing:.24em;text-transform:uppercase;color:var(--lav-dim)}
-.cd-note{margin:28px 0 0;font-family:var(--mono);font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold)}
+
+/* ---------- top bar ---------- */
+.top{position:sticky;top:0;z-index:50;background:#000;border-bottom:2px solid var(--red-d)}
+.top-in{display:flex;align-items:center;gap:18px;height:54px}
+.top-logo img{height:30px;width:auto}
+.top-nav{display:flex;gap:2px;margin-left:6px}
+.top-nav a{font:600 13px/1 var(--hd);text-transform:uppercase;letter-spacing:.14em;color:#bdbdbd;padding:8px 10px;border:1px solid transparent}
+.top-nav a:hover{color:#fff;border-color:var(--ln2);background:var(--p2)}
+.top-r{margin-left:auto;display:flex;align-items:center;gap:10px}
+.clock{font:600 12px/1 var(--hd);letter-spacing:.14em;text-transform:uppercase;color:var(--dim);border:1px solid var(--ln);padding:7px 9px;background:var(--p)}
+.clock b{color:#fff;font-weight:600}
+.clock i{display:inline-block;width:6px;height:6px;background:var(--red-hi);margin-right:7px;vertical-align:1px;animation:blink 1.4s steps(2) infinite}
+@keyframes blink{50%{opacity:.15}}
+.lnk{background:none;border:0;padding:0;cursor:pointer;color:#bdbdbd;font:600 12px/1 var(--hd);text-transform:uppercase;letter-spacing:.14em}
+.lnk:hover{color:#fff}
+
+/* ---------- status strip ---------- */
+.strip{background:#0a0a0a;border-bottom:1px solid var(--ln)}
+.strip .wrap{display:flex;flex-wrap:wrap;gap:6px 22px;padding:7px 0;font-size:11px;color:var(--dim);text-transform:uppercase;letter-spacing:.06em}
+.strip b{color:var(--tx);font-weight:700}
+.strip .closed{color:var(--red-hi)}
+
+/* ---------- buttons / fields ---------- */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;cursor:pointer;
+  background:var(--red-d);color:#fff;border:1px solid var(--red-hi);border-radius:0;
+  font:600 14px/1 var(--hd);text-transform:uppercase;letter-spacing:.16em;padding:11px 18px;
+  box-shadow:inset 0 -3px 0 rgba(0,0,0,.35),0 0 0 1px #000}
+.btn:hover{background:var(--red);color:#fff}
+.btn:active{transform:translateY(1px);box-shadow:inset 0 2px 0 rgba(0,0,0,.4),0 0 0 1px #000}
+.btn.sm{padding:9px 12px;font-size:12px}
+.btn.ghost{background:#111;border-color:var(--ln2);color:#ddd}
+.btn.ghost:hover{border-color:var(--red-hi);color:#fff;background:#1a0a0c}
+.btn.wide{width:100%}
+label.l{display:block;font:700 10.5px/1 var(--bd);text-transform:uppercase;letter-spacing:.1em;color:var(--dim);margin:12px 0 6px}
+.f{display:block;width:100%;height:38px;padding:0 10px;background:#050505;border:1px solid var(--ln2);border-radius:0;color:#fff;font:13px var(--bd)}
+.f::placeholder{color:#5c5c5c}
+.f:focus{outline:none;border-color:var(--red-hi);box-shadow:0 0 0 1px var(--red-hi)}
+.f[aria-invalid=true]{border-color:var(--red-hi)}
+select.f{appearance:none;-webkit-appearance:none;cursor:pointer;
+  background:#050505 url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M0 0h10L5 6z' fill='%23ff2a2a'/%3E%3C/svg%3E") no-repeat right 12px center}
+.seg{display:grid;grid-template-columns:repeat(3,1fr);border:1px solid var(--ln2);margin:0;padding:0}
+.seg legend{padding:0}
+.seg label{position:relative;cursor:pointer}
+.seg input{position:absolute;opacity:0;inset:0;margin:0;cursor:pointer}
+.seg span{display:block;text-align:center;padding:9px 4px;font:600 12px/1 var(--hd);text-transform:uppercase;letter-spacing:.12em;color:#a8a8a8;background:#0a0a0a;border-left:1px solid var(--ln2)}
+.seg label:first-of-type span{border-left:0}
+.seg input:checked+span{background:var(--red-d);color:#fff}
+.seg input:focus-visible+span{outline:2px solid var(--red-hi);outline-offset:-3px}
+.rdesc{font-size:11.5px;color:var(--dim);margin:7px 0 0;min-height:2.9em}
+.err{margin:10px 0 0;padding:7px 9px;border:1px solid var(--red-hi);background:#1d0507;color:#ffb3b3;font-size:11.5px}
+.consent{font-size:10.5px;color:var(--faint);margin:10px 0 0;text-align:center}
+.ilnk{background:none;border:0;padding:0;color:#bbb;text-decoration:underline;cursor:pointer;font-size:inherit}
+.ilnk:hover{color:#fff}
+.ok{border:1px solid #2f6b2f;background:#071407;color:#b9f0b9;padding:12px;font-size:13px;outline:none}
+.ok b{color:#fff}
+
+/* ---------- panels (the core Criminals look) ---------- */
+.pn{background:var(--p);border:1px solid #000;box-shadow:0 0 0 1px var(--ln),0 6px 18px rgba(0,0,0,.5);margin-bottom:14px}
+.ph{display:flex;align-items:center;justify-content:space-between;gap:10px;margin:0;
+  background:linear-gradient(#a3121f,#7d0d17);border-bottom:1px solid #000;box-shadow:inset 0 1px 0 rgba(255,90,90,.35);
+  padding:7px 12px;font:600 14px/1.2 var(--hd);text-transform:uppercase;letter-spacing:.24em;color:#fff}
+.ph small{font:600 10.5px/1 var(--hd);letter-spacing:.16em;color:rgba(255,255,255,.65)}
+.pb{padding:14px}
+.pb.tight{padding:0}
+.pb p{margin:0 0 10px}
+.pb p:last-child{margin-bottom:0}
+h2.big{font:700 clamp(26px,3.2vw,38px)/1.02 var(--hd);text-transform:uppercase;letter-spacing:.02em;color:#fff;margin:0 0 8px}
+h2.big em{font-style:normal;color:var(--red-hi)}
+.red{color:var(--red-hi)}
+
+/* ---------- hero / outgame ---------- */
+.og{display:grid;grid-template-columns:1fr 340px;gap:14px;margin:16px auto 14px}
+.stage{position:relative;min-height:470px;border:1px solid #000;box-shadow:0 0 0 1px var(--ln);overflow:hidden;background:#000;display:flex;flex-direction:column;justify-content:flex-end}
+.stage .art{position:absolute;inset:0;background:url(assets/crime.webp) center 40%/cover no-repeat;filter:grayscale(.55) contrast(1.15) brightness(.62)}
+.stage .tint{position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.25) 0%,rgba(0,0,0,.1) 35%,rgba(0,0,0,.92) 88%),linear-gradient(90deg,rgba(120,0,10,.45),transparent 60%);mix-blend-mode:normal}
+.stage .scan{position:absolute;inset:0;background:repeating-linear-gradient(0deg,rgba(0,0,0,.18) 0 1px,transparent 1px 3px);pointer-events:none}
+.stage-tag{position:absolute;top:12px;left:12px;font:600 11px/1 var(--hd);letter-spacing:.2em;text-transform:uppercase;background:#000;border:1px solid var(--red-d);color:#ff6b6b;padding:6px 8px}
+.stage-in{position:relative;padding:26px 26px 22px}
+.stage h1{margin:0}
+.stage h1 img{width:min(560px,100%);height:auto;filter:drop-shadow(0 6px 0 rgba(0,0,0,.6)) drop-shadow(0 0 24px rgba(200,0,20,.35))}
+.dream{display:inline-block;margin:10px 0 0;font:700 clamp(15px,1.6vw,20px)/1 var(--hd);letter-spacing:.42em;text-transform:uppercase;color:#fff;background:var(--red-d);padding:7px 10px 7px 12px;border:1px solid var(--red-hi)}
+.stage .sub{font-size:15px;color:#e8e8e8;margin:14px 0 0;max-width:46ch}
+.stage .sub b{color:#fff}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:16px}
+.chip{font:600 11px/1 var(--hd);letter-spacing:.16em;text-transform:uppercase;border:1px solid var(--ln2);background:rgba(0,0,0,.7);padding:6px 8px;color:#cfcfcf}
+.chip.r{border-color:var(--red-d);color:#ff7a7a}
+.ios{display:inline-flex;align-items:center;gap:7px}
+.ios svg{width:13px;height:13px;margin-top:-2px}
+
+/* ---------- body layout ---------- */
+.lay{display:grid;grid-template-columns:200px 1fr;gap:14px;align-items:start;margin-bottom:14px}
+.side{position:sticky;top:68px}
+.menu{list-style:none;margin:0;padding:4px 0}
+.menu a,.menu button{display:block;width:100%;text-align:left;background:none;border:0;cursor:pointer;padding:6px 12px;color:#cfcfcf;font-size:12px;border-left:2px solid transparent}
+.menu a:before,.menu button:before{content:"» ";color:var(--red)}
+.menu a:hover,.menu button:hover{background:var(--p3);color:#fff;border-left-color:var(--red-hi)}
+.la{text-align:center}
+.la .t{font:700 34px/1 var(--hd);color:#fff;letter-spacing:.04em}
+.la .d{font-size:11px;color:var(--dim);margin-top:4px;text-transform:uppercase;letter-spacing:.08em}
+table.kv{width:100%;border-collapse:collapse;font-size:11.5px}
+table.kv th,table.kv td{text-align:left;padding:6px 10px;border-top:1px solid var(--ln);vertical-align:top}
+table.kv tr:first-child th,table.kv tr:first-child td{border-top:0}
+table.kv th{color:var(--dim);font-weight:400;white-space:nowrap;width:1%}
+table.kv td{color:#eee}
+
+/* sides */
+.sides{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border-top:1px solid var(--ln)}
+.sd{padding:14px;border-left:1px solid var(--ln);display:flex;flex-direction:column}
+.sd:first-child{border-left:0}
+.sd-k{font:600 11px/1 var(--hd);letter-spacing:.2em;color:var(--red-hi);text-transform:uppercase}
+.sd h3{font:700 26px/1 var(--hd);text-transform:uppercase;color:#fff;margin:6px 0 4px}
+.sd .ln{color:#bdbdbd;margin:0 0 10px;font-size:12px;min-height:3em}
+.sd ul{list-style:none;margin:0 0 14px;padding:0;font-size:12px}
+.sd li{padding:5px 0;border-top:1px dashed var(--ln2)}
+.sd li:before{content:"+ ";color:var(--red-hi);font-weight:700}
+.sd .btn{margin-top:auto}
+.sd.cop .sd-k{color:#7aa2ff}
+.sd.sci .sd-k{color:#6fe0b0}
+.intro{padding:14px;display:flex;gap:16px;align-items:flex-end;justify-content:space-between;flex-wrap:wrap}
+.intro p{margin:0;max-width:52ch;color:#bdbdbd}
+
+/* banners */
+.ban{position:relative;height:200px;overflow:hidden;border-bottom:1px solid #000;background:#000}
+.ban .art{position:absolute;inset:0;background-size:cover;background-position:center 40%;filter:grayscale(.6) contrast(1.2) brightness(.55)}
+.ban:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,0,0,.9) 0%,rgba(0,0,0,.35) 60%,rgba(120,0,10,.3)),repeating-linear-gradient(0deg,rgba(0,0,0,.2) 0 1px,transparent 1px 3px)}
+.ban .cap{position:absolute;z-index:1;left:16px;bottom:14px;right:16px}
+.ban .cap h2{margin:0}
+.ban .cap p{margin:4px 0 0;color:#ccc;max-width:48ch}
+
+/* empire */
+table.grid{width:100%;border-collapse:collapse}
+table.grid td{padding:11px 14px;border-top:1px solid var(--ln);vertical-align:top;width:50%}
+table.grid tr:first-child td{border-top:0}
+table.grid td+td{border-left:1px solid var(--ln)}
+.num{font:700 13px/1 var(--hd);color:var(--red-hi);letter-spacing:.06em;margin-right:6px}
+.it h3{display:inline;font:600 15px/1.2 var(--hd);text-transform:uppercase;letter-spacing:.06em;color:#fff;margin:0}
+.it p{margin:4px 0 0;color:#a9a9a9;font-size:12px}
+
+/* ranks */
+table.rk{width:100%;border-collapse:collapse;font-size:12px}
+table.rk th{font:600 11px/1 var(--hd);letter-spacing:.18em;text-transform:uppercase;color:var(--dim);text-align:left;padding:8px 14px;background:#0a0a0a;border-bottom:1px solid var(--ln)}
+table.rk td{padding:9px 14px;border-bottom:1px solid var(--ln)}
+table.rk tr:last-child td{border-bottom:0}
+table.rk td:first-child{width:56px;font:700 15px/1 var(--hd);color:var(--red-hi)}
+table.rk td:nth-child(2){width:120px;font:600 15px/1 var(--hd);text-transform:uppercase;letter-spacing:.08em;color:#fff}
+.bar{height:8px;background:#1d1d1d;border:1px solid #000;width:100px}
+.bar i{display:block;height:100%;background:repeating-linear-gradient(90deg,var(--red) 0 6px,var(--red-d) 6px 8px)}
+table.rk td:last-child{width:130px}
+
+/* cities */
+.cw{display:grid;grid-template-columns:1fr 260px}
+table.ct{width:100%;border-collapse:collapse;font-size:12px}
+table.ct th{font:600 11px/1 var(--hd);letter-spacing:.18em;text-transform:uppercase;color:var(--dim);text-align:left;padding:8px 12px;background:#0a0a0a;border-bottom:1px solid var(--ln)}
+table.ct td{padding:0;border-bottom:1px solid var(--ln)}
+table.ct tr:last-child td{border-bottom:0}
+table.ct button{display:grid;grid-template-columns:28px 22px 1fr auto;align-items:center;gap:6px;width:100%;text-align:left;background:none;border:0;padding:9px 12px;cursor:pointer;color:#ccc}
+table.ct button:hover{background:var(--p3)}
+table.ct tr.on button{background:#1b0709;box-shadow:inset 3px 0 0 var(--red-hi)}
+.mk{width:10px;height:10px;background:#3a3a3a;border:1px solid #000;transform:rotate(45deg);justify-self:center}
+tr.on .mk,table.ct button:hover .mk{background:var(--red-hi);box-shadow:0 0 8px rgba(255,42,42,.7)}
+.cn{font:600 15px/1 var(--hd);text-transform:uppercase;letter-spacing:.06em;color:#fff}
+.cf{font:600 10.5px/1 var(--hd);letter-spacing:.16em;text-transform:uppercase;color:var(--dim)}
+.cidx{font:700 12px/1 var(--hd);color:var(--faint)}
+.cbox{border-left:1px solid var(--ln);display:flex;flex-direction:column}
+.cbox .ph2{position:relative;height:150px;background:url(assets/shoplift-800.webp) center/cover;filter:grayscale(.55) contrast(1.15) brightness(.6);border-bottom:1px solid #000}
+.cbox .cd{padding:14px;display:flex;flex-direction:column;gap:10px;flex:1}
+.cbox .cd b{display:block;font:700 22px/1 var(--hd);text-transform:uppercase;color:#fff}
+.cbox .cd .tg{font:600 11px/1 var(--hd);letter-spacing:.2em;text-transform:uppercase;color:var(--red-hi)}
+.cbox .cd p{margin:0;color:#bbb;font-size:12px}
+.cbox .btn{margin-top:auto}
+
+/* countdown HUD */
+.hud{background:#030303;padding:18px 14px 14px;text-align:center;background-image:repeating-linear-gradient(0deg,rgba(255,255,255,.025) 0 1px,transparent 1px 4px)}
+.hud-row{display:flex;justify-content:center;align-items:flex-start;gap:6px}
+.hu{min-width:96px;border:1px solid #2a0a0e;background:#0b0203;box-shadow:inset 0 0 18px rgba(255,0,20,.12)}
+.hv{display:block;font:700 54px/1 var(--hd);color:var(--red-hi);padding:10px 8px 6px;font-variant-numeric:tabular-nums;text-shadow:0 0 14px rgba(255,42,42,.55)}
+.hl{display:block;font:600 10px/1 var(--hd);letter-spacing:.24em;text-transform:uppercase;color:#888;border-top:1px solid #2a0a0e;padding:6px 0}
+.colon{font:700 44px/1 var(--hd);color:#5a0b13;padding-top:12px}
+.hud-note{margin:12px 0 0;font-size:11px;color:var(--dim);text-transform:uppercase;letter-spacing:.1em}
+.hud-note b{color:#fff}
+
 /* final */
-.final{position:relative;overflow:hidden;isolation:isolate;text-align:center;padding:clamp(120px,16vw,220px) 22px}
-.final-photo{position:absolute;inset:-15% 0;z-index:-2;background:#1a0f12 center 30%/cover no-repeat;background-image:url("assets/bg.jpg");background-image:image-set(url("assets/bg.webp") type("image/webp"),url("assets/bg.jpg") type("image/jpeg"));will-change:transform}
-.final:before{content:"";position:absolute;inset:0;z-index:-1;background:radial-gradient(60% 60% at 50% 50%,rgba(9,8,13,.5),rgba(9,8,13,.86)),linear-gradient(180deg,var(--night),transparent 25%,transparent 75%,var(--night))}
-.final .eyebrow{justify-content:center}
-.final .h2{font-size:clamp(40px,7vw,96px);max-width:1000px;margin-inline:auto}
-.final .lede{margin-inline:auto;color:rgba(255,250,245,.85)}
-.final .btn{margin-top:40px}
+.fin{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;padding:18px 16px;border:1px solid var(--red-d);background:linear-gradient(90deg,#160406,#0b0b0b);box-shadow:0 0 0 1px #000}
+.fin p{margin:4px 0 0;color:#bbb}
+
 /* footer */
-footer{padding:60px 0 calc(40px + env(safe-area-inset-bottom,0px));border-top:1px solid var(--line);background:var(--night)}
-.ft{display:flex;justify-content:space-between;align-items:center;gap:26px;flex-wrap:wrap}
-.ft-logo img{height:34px;width:auto}
-.ft-links{display:flex;gap:22px;align-items:center;flex-wrap:wrap;font-size:13.5px;font-weight:600;color:var(--lav)}
-.ft-links a:hover,.ft-links button:hover{color:var(--white)}
-.linkbtn{appearance:none;border:0;background:none;padding:0;cursor:pointer;font:inherit;color:inherit}
-.ft-small{margin-top:30px;padding-top:24px;border-top:1px solid var(--line);display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:12px;color:var(--faint)}
-.ft-small strong{color:var(--lav)}
-.ft-small .ios{justify-content:flex-start;text-shadow:none;color:var(--lav-dim)}
+footer{margin:6px auto 22px}
+.ft{border:1px solid #000;box-shadow:0 0 0 1px var(--ln);background:var(--p);padding:12px 14px;display:flex;flex-wrap:wrap;gap:10px 18px;align-items:center;justify-content:space-between;font-size:11px;color:var(--dim)}
+.ft a{color:#cfcfcf}
+.ft nav{display:flex;gap:14px;flex-wrap:wrap;align-items:center}
+.ft .lnk{font:11px var(--bd);text-transform:none;letter-spacing:0;color:#cfcfcf}
+.ft .lnk:hover{color:#fff}
+
 /* dialogs */
-dialog{padding:0;border:0;background:transparent;color:var(--white);max-width:none;max-height:none;overflow:visible}
-dialog::backdrop{background:rgba(10,7,16,.8);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px)}
-dialog[open]{animation:pop .45s var(--ease)}
-@keyframes pop{from{opacity:0;transform:translateY(14px) scale(.98)}}
-.modal-card{width:min(480px,calc(100vw - 32px));max-height:calc(100svh - 32px);overflow:auto;padding:34px;border-radius:28px;background:var(--night-3);border:1px solid var(--line-hi);box-shadow:var(--shadow-lg);position:relative}
-.modal-card:before{content:"";position:absolute;inset:0 0 auto 0;height:3px;background:var(--grad-sunset)}
-.kicker{font-family:var(--mono);font-size:11px;text-transform:uppercase;letter-spacing:.22em;color:var(--pink-hi);font-weight:700;margin-bottom:12px}
-.modal-card h3{margin:0 0 10px;font-size:30px;font-weight:800;letter-spacing:-.02em;line-height:1.1}
-.modal-card p{color:var(--lav);line-height:1.6;font-size:14px;margin:0 0 16px}
-.close{position:absolute;right:18px;top:18px;width:38px;height:38px;border-radius:50%;border:1px solid var(--line);background:var(--night);color:var(--lav);cursor:pointer;font-size:18px;line-height:1}
-.close:hover{color:var(--white);border-color:var(--line-hi)}
-.field{width:100%;border:1px solid rgba(255,214,235,.14);background:var(--night);color:var(--white);border-radius:14px;padding:15px;margin:7px 0;outline:none;font-size:15px;transition:border-color .2s,box-shadow .2s}
-.field:focus{border-color:var(--pink);box-shadow:0 0 0 4px rgba(216,93,125,.15)}
-.field::placeholder{color:var(--lav-dim)}
-.select{appearance:none;-webkit-appearance:none;cursor:pointer;padding-right:42px;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' fill='none' stroke='%23d8ae79' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 16px center}
-.select:invalid{color:var(--lav-dim)}
-.select option{color:var(--white);background:var(--night-3)}
-.btn-form{border:0;cursor:pointer;border-radius:999px;padding:16px;font-weight:800;font-size:15px;width:100%;margin-top:9px;background:var(--grad-sunset);color:#2a0c1e;box-shadow:0 14px 36px rgba(255,110,140,.3);transition:transform .25s var(--ease),box-shadow .25s}
-.btn-form:hover{transform:translateY(-1px);box-shadow:0 18px 44px rgba(255,110,140,.42)}
-.roles{border:0;margin:4px 0 0;padding:0;display:grid;grid-template-columns:repeat(3,1fr);gap:6px}
-.role{position:relative;cursor:pointer}
-.role input{position:absolute;opacity:0;pointer-events:none}
-.role span{display:block;text-align:center;padding:13px 4px;border-radius:12px;border:1px solid rgba(255,214,235,.14);background:var(--night);font-weight:800;font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--lav-dim);transition:color .15s,border-color .15s,background .15s}
-.role:hover span{color:var(--lav)}
-.role input:checked + span{color:#2a0c1e;border-color:transparent;background:var(--gold-hi)}
-.role input:focus-visible + span{outline:2px solid var(--pink-hi);outline-offset:2px}
-@media(max-width:420px){.role span{font-size:11px;letter-spacing:.06em}.modal-card{padding:28px 22px}}
-.modal-card .role-desc{margin:10px 2px 8px;font-size:13px;min-height:3.2em}
-.modal-card .consent{margin:12px 0 0;font-size:11.5px;line-height:1.5;color:var(--lav-dim);text-align:center}
-.modal-card .err{margin:4px 0 0;font-size:12.5px;color:var(--pink-hi);text-align:center}
-.inline-link{appearance:none;border:0;background:none;padding:0;font:inherit;color:var(--gold);cursor:pointer;text-decoration:underline;text-underline-offset:2px}
-.inline-link:hover{color:var(--gold-hi)}
-.modal-card .success{color:var(--gold-hi);font-weight:600;font-size:16px;line-height:1.5;outline:none}
-.legal-card{width:min(820px,calc(100vw - 32px));max-height:min(84svh,900px);display:flex;flex-direction:column;overflow:hidden;border-radius:26px;background:var(--night-3);border:1px solid var(--line-hi);box-shadow:var(--shadow-lg)}
-.legal-head{display:flex;align-items:center;justify-content:space-between;gap:18px;padding:22px 24px;border-bottom:1px solid var(--line);background:var(--night-2)}
-.legal-head h3{margin:0;font-size:25px;font-weight:800;letter-spacing:-.02em}
-.legal-head small{display:block;color:var(--faint);margin-top:3px;font-size:11px}
-.legal-close{flex:none;width:38px;height:38px;border-radius:50%;border:1px solid var(--line);background:var(--night);color:var(--lav);cursor:pointer;font-size:21px;line-height:1}
-.legal-close:hover{color:var(--white)}
-.legal-body{padding:26px 26px 32px;overflow:auto;overscroll-behavior:contain}
-.legal-body h4{margin:25px 0 7px;font-size:18px;font-weight:800;background:var(--grad-sunset);-webkit-background-clip:text;background-clip:text;color:transparent}
-.legal-body h4:first-child{margin-top:0}
-.legal-body p{color:var(--lav);line-height:1.7;font-size:13px;margin:0}
+dialog{padding:0;border:0;background:transparent;color:var(--tx);max-width:none;max-height:none}
+dialog::backdrop{background:rgba(0,0,0,.82)}
+.dlg{width:min(440px,calc(100vw - 20px));max-height:calc(100svh - 20px);overflow:auto;background:var(--p);border:1px solid #000;box-shadow:0 0 0 1px var(--red-d),0 20px 60px rgba(0,0,0,.8)}
+.dlg.lg{width:min(720px,calc(100vw - 20px));display:flex;flex-direction:column}
+.x{background:#000;border:1px solid rgba(255,255,255,.35);color:#fff;width:26px;height:26px;cursor:pointer;font:700 15px/1 var(--bd);padding:0}
+.x:hover{background:#fff;color:#000}
+.legal{padding:14px 16px 18px;overflow:auto;font-size:12.5px;color:#c9c9c9}
+.legal small{display:block;color:var(--dim);margin-bottom:8px;text-transform:uppercase;letter-spacing:.08em;font-size:10.5px}
+.legal h4{font:600 14px/1.2 var(--hd);text-transform:uppercase;letter-spacing:.1em;color:#fff;margin:16px 0 4px;padding-bottom:4px;border-bottom:1px solid var(--ln)}
+.legal p{margin:0 0 6px;line-height:1.6}
+
+/* ---------- responsive ---------- */
+@media (max-width:1020px){
+  .top-nav{display:none}
+  .og{grid-template-columns:1fr}
+  .stage{min-height:420px}
+  .lay{grid-template-columns:1fr}
+  .side{position:static;order:2;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:0 14px}
+  .side .menu-pn{display:none}
+}
+@media (max-width:760px){
+  .sides{grid-template-columns:1fr}
+  .sd{border-left:0;border-top:1px solid var(--ln)}
+  .sd:first-child{border-top:0}
+  .sd .ln{min-height:0}
+  table.grid,table.grid tbody,table.grid tr,table.grid td{display:block;width:auto}
+  table.grid tr td+td{border-left:0;border-top:1px solid var(--ln)!important}
+  .cw{grid-template-columns:1fr}
+  .cbox{border-left:0;border-top:1px solid var(--ln)}
+  table.rk td:last-child,table.rk th:last-child{display:none}
+}
+@media (max-width:520px){
+  body{font-size:13px}
+  .top-in{gap:8px;height:50px}
+  .top-logo img{height:24px}
+  .top-r .lnk{display:none}
+  .clock{padding:6px 7px;font-size:11px}
+  .clock .cty{display:none}
+  .stage{min-height:0}
+  .stage-in{padding:64px 14px 16px}
+  .dream{letter-spacing:.3em}
+  .ban{height:170px}
+  .hu{min-width:0;flex:1}
+  .hv{font-size:34px;padding:8px 2px 5px}
+  .colon{display:none}
+  .hud-row{gap:4px}
+  .strip .wrap{gap:4px 14px;font-size:10px}
+  table.rk td:nth-child(2){width:auto}
+  .fin .btn{width:100%}
+}
 </style>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
-<div class="grain" aria-hidden="true"></div>
-
-<svg width="0" height="0" style="position:absolute;overflow:hidden" aria-hidden="true" focusable="false">
-  <defs><linearGradient id="gold" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f0d0a4"/><stop offset="1" stop-color="#ee8c9e"/></linearGradient></defs>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
   <symbol id="i-apple" viewBox="0 0 24 24"><path fill="currentColor" d="M16.365 1.43c0 1.14-.475 2.222-1.24 3.02-.834.87-2.15 1.55-3.24 1.46-.13-1.1.46-2.26 1.23-3.03.85-.87 2.27-1.5 3.25-1.45zM20.6 17.14c-.5 1.15-.74 1.67-1.38 2.68-.9 1.42-2.16 3.19-3.73 3.2-1.4.02-1.76-.9-3.66-.9-1.9 0-2.3.88-3.7.92-1.57.05-2.77-1.53-3.68-2.94C2.5 17.1 1.9 13.3 3.4 10.68c.98-1.72 2.72-2.8 4.6-2.83 1.44-.03 2.8.97 3.68.97.87 0 2.53-1.2 4.27-1.02.73.03 2.77.29 4.08 2.2-3.44 2.15-2.68 6.62.57 8.14z"/></symbol>
-  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
-  <symbol id="i-car" viewBox="0 0 24 24"><g fill="none" stroke="url(#gold)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 15.5V13l2.2-4.4A2 2 0 0 1 7 7.5h7.6a2 2 0 0 1 1.5.7L19 11.5l1.6.6a1.5 1.5 0 0 1 .9 1.4v2"/><path d="M3 15.5h18.5"/><circle cx="7.5" cy="16" r="2"/><circle cx="17" cy="16" r="2"/><path d="M6 11.5h12"/></g></symbol>
-  <symbol id="i-family" viewBox="0 0 24 24"><g fill="none" stroke="url(#gold)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="7" r="3"/><path d="M6 20v-1.5A5 5 0 0 1 11 13.5h2a5 5 0 0 1 5 5V20"/><circle cx="4.5" cy="9.5" r="2"/><circle cx="19.5" cy="9.5" r="2"/><path d="M1.5 18v-.5a3.5 3.5 0 0 1 3-3.4M22.5 18v-.5a3.5 3.5 0 0 0-3-3.4"/></g></symbol>
-  <symbol id="i-flag" viewBox="0 0 24 24"><g fill="none" stroke="url(#gold)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 21V4"/><path d="M5 4h11l-2 4 2 4H5"/><path d="M9 21H3"/></g></symbol>
-  <symbol id="i-club" viewBox="0 0 24 24"><g fill="none" stroke="url(#gold)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="11" height="16" rx="2" transform="rotate(-8 8.5 12)"/><path d="M14.5 6.5l4.3.9a2 2 0 0 1 1.5 2.4l-2.2 10a2 2 0 0 1-2.4 1.5l-3.2-.7"/><path d="M8.3 9.5l1.5 2.2-1.5 2.2-1.5-2.2z"/></g></symbol>
-  <symbol id="i-diamond" viewBox="0 0 24 24"><g fill="none" stroke="url(#gold)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3.5h12l3.5 5L12 21 2.5 8.5z"/><path d="M2.5 8.5h19M9 3.5l-1.5 5L12 21l4.5-12.5L15 3.5"/></g></symbol>
-  <symbol id="i-yacht" viewBox="0 0 24 24"><g fill="none" stroke="url(#gold)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 15h20l-2.5 4h-15z"/><path d="M5 15l2-4h9l3 4"/><path d="M9 11V8h5l1.5 3"/><path d="M2 21.5c1.5 0 1.5-1 3-1s1.5 1 3 1 1.5-1 3-1 1.5 1 3 1 1.5-1 3-1 1.5 1 3 1"/></g></symbol>
-  <symbol id="i-crown" viewBox="0 0 24 24"><g fill="none" stroke="url(#gold)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8l4.5 4L12 5l4.5 7L21 8l-2 10H5z"/><path d="M5 21h14"/></g></symbol>
-  <symbol id="i-net" viewBox="0 0 24 24"><g fill="none" stroke="url(#gold)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="6" r="2.5"/><circle cx="18" cy="6" r="2.5"/><circle cx="12" cy="18" r="2.5"/><path d="M8.5 6h7M7.2 8.2l3.6 7.6M16.8 8.2l-3.6 7.6"/></g></symbol>
 </svg>
 
-<header class="hdr" id="hdr">
-  <a class="hdr-logo" href="#top" aria-label="Gangsters — back to top"><picture><source srcset="assets/logo-1200.webp" type="image/webp"><img src="assets/logo.png" alt="" width="2161" height="728"></picture></a>
-  <div class="la" aria-label="Live in Los Angeles">
-    <span class="la-dot" aria-hidden="true"></span>
-    <span class="la-city">Los Angeles</span>
-    <span class="la-sep" aria-hidden="true"></span>
-    <time class="la-time" id="laTime">--:--</time>
-    <span class="la-wx" id="laWx" hidden><span class="la-sep" aria-hidden="true"></span><span id="laIcon" aria-hidden="true"></span><span id="laTemp"></span></span>
-  </div>
-  <div class="hdr-right">
-    <nav class="hdr-nav" aria-label="Sections"><a href="#roles">Sides</a><a href="#empire">Empire</a><a href="#cities">California</a><a href="#launch">Launch</a></nav>
-    <button class="btn btn-sun btn-sm" data-open id="hdrCta">Claim your name</button>
+<header class="top">
+  <div class="wrap top-in">
+    <a class="top-logo" href="#top" aria-label="Gangsters — home"><picture><source srcset="assets/logo-red-1200.webp" type="image/webp"><img src="assets/logo-red.png" alt="" width="2161" height="728"></picture></a>
+    <nav class="top-nav" aria-label="Sections"><a href="#sides">Sides</a><a href="#empire">Empire</a><a href="#ranks">Ranks</a><a href="#cities">Cities</a><a href="#launch">Launch</a></nav>
+    <div class="top-r">
+      <span class="clock" aria-label="Current time in Los Angeles"><i aria-hidden="true"></i><span class="cty">LA&nbsp;</span><b id="laTime">--:--</b></span>
+      <button class="lnk" data-legal="terms">Legal</button>
+      <button class="btn sm" data-open>Claim name</button>
+    </div>
   </div>
 </header>
-
-<section class="hero" id="top" aria-label="Gangsters: The American Dream">
-  <div class="photo" id="heroPhoto" aria-hidden="true"><div class="photo-in"></div></div>
-  <div class="shade" aria-hidden="true"></div>
-  <div class="flare" aria-hidden="true"></div>
-  <div class="vignette" aria-hidden="true"></div>
-  <div class="hero-inner">
-    <h1><picture><source srcset="assets/logo-1200.webp" type="image/webp"><img class="logo" src="assets/logo.png" alt="Gangsters" width="2161" height="728" fetchpriority="high"></picture></h1>
-    <p class="tag">The American Dream</p>
-    <p class="sub">Build your criminal empire and take over California.</p>
-    <p class="sub2">Your family. Your empire. Your California.</p>
-    <div class="hero-ctas">
-      <button class="btn btn-sun" data-open>Claim your name <svg aria-hidden="true"><use href="#i-arrow"/></svg></button>
-      <a class="btn btn-ghost" href="#roles">Choose your side</a>
-    </div>
-    <div class="hero-meta">
-      <div class="date-chip">Coming December 27, 2027</div>
-      <div class="ios"><svg aria-hidden="true"><use href="#i-apple"/></svg><span>Built for iPhone, iPhone Duo &amp; iPad</span></div>
-    </div>
-  </div>
-  <a class="scroll-cue" href="#roles" aria-label="Scroll to explore"><span aria-hidden="true">Scroll</span><i aria-hidden="true"></i></a>
-</section>
-
-<main id="main">
-  <div class="ticker" aria-hidden="true">
-    <div class="ticker-track">
-      <span>Steal cars</span><span>Pull heists</span><span>Run a crime family</span><span>Own the nightclubs</span><span>Stack diamonds</span><span>Control territory</span><span>Buy the yacht</span><span>Take California</span>
-      <span>Steal cars</span><span>Pull heists</span><span>Run a crime family</span><span>Own the nightclubs</span><span>Stack diamonds</span><span>Control territory</span><span>Buy the yacht</span><span>Take California</span>
-    </div>
-  </div>
-
-  <section class="sec roles-sec" id="roles" aria-labelledby="rolesH">
-    <div class="wrap">
-      <div class="sec-head">
-        <div>
-          <p class="eyebrow rv">Choose your side</p>
-          <h2 class="h2 rv" data-d="1" id="rolesH">Three ways in.<br><em>One way to the top.</em></h2>
-        </div>
-        <p class="lede rv" data-d="2">Every player picks a side before the streets open. Each one plays California differently — and every side needs the other two.</p>
-      </div>
-      <div class="roles-grid">
-        <article class="rc rc-crim rv">
-          <div class="rc-bg" aria-hidden="true"></div>
-          <svg class="rc-emblem" viewBox="0 0 200 200" aria-hidden="true">
-            <defs><linearGradient id="cg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f0d0a4"/><stop offset="1" stop-color="#d85d7d"/></linearGradient></defs>
-            <circle cx="100" cy="100" r="88" fill="none" stroke="url(#cg)" stroke-opacity=".35"/>
-            <circle cx="100" cy="100" r="72" fill="none" stroke="url(#cg)" stroke-opacity=".22" stroke-dasharray="2 6"/>
-            <path d="M34 120c22 12 110 12 132 0-6 12-44 22-66 22s-60-10-66-22z" fill="url(#cg)"/>
-            <path d="M60 118c0-22 6-48 19-54 9-4 14 5 21 5s12-9 21-5c13 6 19 32 19 54-24 7-56 7-80 0z" fill="url(#cg)" opacity=".94"/>
-            <path d="M61 104c25 7 53 7 78 0l1 12c-25 7-55 7-80 0z" fill="#2a1420"/>
-            <path d="M100 69c-3 10-3 24 0 34" stroke="#2a1420" stroke-width="2" fill="none" opacity=".5"/>
-          </svg>
-          <div class="rc-glow" aria-hidden="true"></div>
-          <div class="rc-num"><span>01 · The Family</span><span>Criminal</span></div>
-          <div class="rc-body">
-            <h3>Criminal</h3>
-            <p class="rc-line">Start with a stolen car. End with the coast.</p>
-            <ul>
-              <li>Steal cars and pull heists across the state</li>
-              <li>Build and run your own crime family</li>
-              <li>Own the poker rooms, the clubs, the block</li>
-            </ul>
-            <p class="rc-quote">“Nobody hands you California.”</p>
-            <button class="btn" data-open data-role="Criminal">Play as a Criminal <svg aria-hidden="true"><use href="#i-arrow"/></svg></button>
-          </div>
-        </article>
-
-        <article class="rc rc-cop rv" data-d="1">
-          <div class="rc-bg" aria-hidden="true"></div>
-          <div class="siren" aria-hidden="true"></div>
-          <svg class="rc-emblem" viewBox="0 0 200 200" aria-hidden="true">
-            <defs><linearGradient id="pg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#e6ecff"/><stop offset="1" stop-color="#7d9be0"/></linearGradient></defs>
-            <circle cx="100" cy="100" r="88" fill="none" stroke="url(#pg)" stroke-opacity=".35"/>
-            <circle cx="100" cy="100" r="72" fill="none" stroke="url(#pg)" stroke-opacity=".22" stroke-dasharray="2 6"/>
-            <path d="M100 38l14 12 18-2 4 18 14 10-8 16 8 16-14 10-4 18-18-2-14 12-14-12-18 2-4-18-14-10 8-16-8-16 14-10 4-18 18 2z" fill="url(#pg)" opacity=".92"/>
-            <circle cx="100" cy="102" r="30" fill="#141a2c"/>
-            <path d="M100 84l5.3 11 12 1.6-8.8 8.3 2.2 11.9L100 111l-10.7 5.8 2.2-11.9-8.8-8.3 12-1.6z" fill="url(#pg)"/>
-          </svg>
-          <div class="rc-glow" aria-hidden="true"></div>
-          <div class="rc-num"><span>02 · The Badge</span><span>Police</span></div>
-          <div class="rc-body">
-            <h3>Dirty Cop</h3>
-            <p class="rc-line">The badge opens doors. You decide which ones stay shut.</p>
-            <ul>
-              <li>Raid the families and bring them down</li>
-              <li>Or take a cut and look the other way</li>
-              <li>Work both sides of the law</li>
-            </ul>
-            <p class="rc-quote">“Everybody pays. One way or another.”</p>
-            <button class="btn" data-open data-role="Police">Play as Police <svg aria-hidden="true"><use href="#i-arrow"/></svg></button>
-          </div>
-        </article>
-
-        <article class="rc rc-sci rv" data-d="2">
-          <div class="rc-bg" aria-hidden="true"></div>
-          <svg class="rc-emblem" viewBox="0 0 200 200" aria-hidden="true">
-            <defs><linearGradient id="sg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#eafff6"/><stop offset="1" stop-color="#7fd8b8"/></linearGradient></defs>
-            <circle cx="100" cy="100" r="88" fill="none" stroke="url(#sg)" stroke-opacity=".35"/>
-            <circle cx="100" cy="100" r="72" fill="none" stroke="url(#sg)" stroke-opacity=".22" stroke-dasharray="2 6"/>
-            <path d="M84 46h32M90 46v34l-30 52a12 12 0 0 0 10.4 18h59.2a12 12 0 0 0 10.4-18l-30-52V46" fill="none" stroke="url(#sg)" stroke-width="6" stroke-linejoin="round" stroke-linecap="round"/>
-            <path d="M71 118h58l11 18a8 8 0 0 1-7 10H67a8 8 0 0 1-7-10z" fill="url(#sg)" opacity=".88"/>
-            <circle cx="92" cy="130" r="4" fill="#0f1f1c"/><circle cx="110" cy="136" r="3" fill="#0f1f1c"/>
-            <circle class="bubble" cx="100" cy="112" r="3.5" fill="url(#sg)"/><circle class="bubble" cx="94" cy="112" r="2.5" fill="url(#sg)"/><circle class="bubble" cx="106" cy="112" r="2" fill="url(#sg)"/>
-          </svg>
-          <div class="rc-glow" aria-hidden="true"></div>
-          <div class="rc-num"><span>03 · The Lab</span><span>Scientist</span></div>
-          <div class="rc-body">
-            <h3>Rogue Scientist</h3>
-            <p class="rc-line">Purity is power. Everyone needs you. Nobody trusts you.</p>
-            <ul>
-              <li>Cook the purest product in California</li>
-              <li>Sell to the families and the cops alike</li>
-              <li>Stay neutral — and get rich off both sides</li>
-            </ul>
-            <p class="rc-quote">“I don't pick sides. I pick prices.”</p>
-            <button class="btn" data-open data-role="Scientist">Play as a Scientist <svg aria-hidden="true"><use href="#i-arrow"/></svg></button>
-          </div>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <section class="rise" aria-labelledby="riseH">
-    <div class="rise-photo" data-par="0.14" aria-hidden="true"></div>
-    <div class="wrap">
-      <p class="eyebrow rv">The American Dream</p>
-      <h2 class="h2 rv" data-d="1" id="riseH">From the curb<br><em>to the coast.</em></h2>
-      <p class="lede rv" data-d="2">Every empire in California starts with one name and one stolen ride. Here's how yours grows.</p>
-      <div class="rise-steps">
-        <div class="step rv"><span class="mono">01</span><h3>Hustle</h3><p>Boost your first car. Make your first enemy. Get noticed.</p></div>
-        <div class="step rv" data-d="1"><span class="mono">02</span><h3>Crew</h3><p>Recruit the right people and pull the jobs that make headlines.</p></div>
-        <div class="step rv" data-d="2"><span class="mono">03</span><h3>Family</h3><p>Run businesses, take territory and put your name on the map.</p></div>
-        <div class="step rv" data-d="3"><span class="mono">04</span><h3>Empire</h3><p>Yachts. Mansions. Supercars. The whole state answering to you.</p></div>
-      </div>
-    </div>
-  </section>
-
-  <section class="sec" id="empire" aria-labelledby="empireH">
-    <div class="wrap">
-      <div class="sec-head">
-        <div>
-          <p class="eyebrow rv">Build your empire</p>
-          <h2 class="h2 rv" data-d="1" id="empireH">Everything a kingpin<br><em>could want.</em></h2>
-        </div>
-        <p class="lede rv" data-d="2">Make your way to the top and become California's most powerful gangster. Here's what's on the table.</p>
-      </div>
-      <div class="sys-grid">
-        <div class="sys rv"><div class="sys-ic"><svg aria-hidden="true"><use href="#i-car"/></svg></div><span class="mono">01</span><h3>Heists &amp; Cars</h3><p>Steal cars off the street and pull heists that put your name in the papers.</p></div>
-        <div class="sys rv" data-d="1"><div class="sys-ic"><svg aria-hidden="true"><use href="#i-family"/></svg></div><span class="mono">02</span><h3>Crime Family</h3><p>Recruit your crew, run a family and rise together — or fall together.</p></div>
-        <div class="sys rv" data-d="2"><div class="sys-ic"><svg aria-hidden="true"><use href="#i-flag"/></svg></div><span class="mono">03</span><h3>Territory</h3><p>Take blocks, hold neighborhoods and push your colors across the state.</p></div>
-        <div class="sys rv" data-d="3"><div class="sys-ic"><svg aria-hidden="true"><use href="#i-club"/></svg></div><span class="mono">04</span><h3>Businesses</h3><p>Own poker rooms, nightclubs and underground businesses that keep the money moving.</p></div>
-        <div class="sys rv"><div class="sys-ic"><svg aria-hidden="true"><use href="#i-diamond"/></svg></div><span class="mono">05</span><h3>Cash &amp; Diamonds</h3><p>Stack cash. Stack diamonds. Spend like the dream depends on it.</p></div>
-        <div class="sys rv" data-d="1"><div class="sys-ic"><svg aria-hidden="true"><use href="#i-yacht"/></svg></div><span class="mono">06</span><h3>The Fleet</h3><p>Supercars in the garage, a yacht in the marina, a mansion on the hill.</p></div>
-        <div class="sys rv" data-d="2"><div class="sys-ic"><svg aria-hidden="true"><use href="#i-crown"/></svg></div><span class="mono">07</span><h3>Reputation</h3><p>Every move builds your name. Make it one all of California remembers.</p></div>
-        <div class="sys rv" data-d="3"><div class="sys-ic"><svg aria-hidden="true"><use href="#i-net"/></svg></div><span class="mono">08</span><h3>Multiplayer California</h3><p>Real players. Real rivals. Real alliances. One state up for grabs.</p></div>
-      </div>
-    </div>
-  </section>
-
-  <section class="sec map-sec" id="cities" aria-labelledby="citiesH">
-    <div class="wrap map-wrap">
-      <div class="map rv">
-        <svg viewBox="0 0 440 510" aria-label="Map of California with the seven starting cities">
-          <defs>
-            <linearGradient id="caFill" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#1c1823"/><stop offset=".6" stop-color="#241722"/><stop offset="1" stop-color="#3d1e2b"/></linearGradient>
-            <linearGradient id="routeG" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f0d0a4"/><stop offset="1" stop-color="#ee8c9e"/></linearGradient>
-            <path id="caPath" d="M25.6 20 L194 20 L194 170 L408.8 370 L410 405 L416.8 416 L405.2 484 L309.2 493.5 L304 482.5 L302.8 470 L290 450 L274 435 L258 432.5 L254 418.5 L234 416 L214 400 L194 397.5 L170 392.5 L168 365 L154 340 L118 305 L116 290 L122 277.5 L114 271.5 L98 260 L94 245 L94 230 L76 220 L74 205 L46 172.5 L42 140 L40 120 L20 105 L30 75 L26 45Z"/>
-            <clipPath id="caClip"><use href="#caPath"/></clipPath>
-          </defs>
-          <use href="#caPath" class="ca"/>
-          <g clip-path="url(#caClip)" class="ca-grid"><path d="M0 60H440M0 120H440M0 180H440M0 240H440M0 300H440M0 360H440M0 420H440M0 480H440M60 0V510M120 0V510M180 0V510M240 0V510M300 0V510M360 0V510"/></g>
-          <path class="route" d="M134.4 191 L103.2 230 M97.2 231.5 L264.4 417.5 L276.8 439 L307.6 484 M264.4 417.5 L332 428.5"/>
-          <text x="360" y="120" fill="rgba(255,245,236,.25)" font-family="Space Mono,monospace" font-size="10" letter-spacing="3" text-anchor="middle">NEVADA</text>
-          <text x="40" y="380" fill="rgba(255,245,236,.18)" font-family="Space Mono,monospace" font-size="10" letter-spacing="3">PACIFIC</text>
-          <g id="pins"></g>
-        </svg>
-      </div>
-      <div>
-        <p class="eyebrow rv">Your California</p>
-        <h2 class="h2 rv" data-d="1" id="citiesH">Seven cities.<br><em>Pick where it starts.</em></h2>
-        <p class="lede rv" data-d="2">Your story begins in one city. Where it ends is up to you.</p>
-        <ul class="city-list rv" data-d="2" id="cityList"></ul>
-        <div class="city-detail rv" data-d="3">
-          <p id="cityDetail" aria-live="polite"></p>
-          <button class="btn btn-sun" id="cityGo" data-open><span id="cityGoTxt">Start here</span> <svg aria-hidden="true"><use href="#i-arrow"/></svg></button>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="sec cd-sec" id="launch" aria-labelledby="cdTitle">
-    <div class="wrap">
-      <p class="eyebrow rv">The streets open</p>
-      <h2 class="h2 rv" data-d="1" id="cdTitle">December 27, <em>2027.</em></h2>
-      <div class="cd rv" data-d="2" role="timer" aria-live="off" aria-label="Countdown to launch">
-        <div class="cd-u"><span class="cd-v" id="cdD">---</span><span class="cd-l">Days</span></div>
-        <div class="cd-u"><span class="cd-v" id="cdH">--</span><span class="cd-l">Hours</span></div>
-        <div class="cd-u"><span class="cd-v" id="cdM">--</span><span class="cd-l">Minutes</span></div>
-        <div class="cd-u"><span class="cd-v" id="cdS">--</span><span class="cd-l">Seconds</span></div>
-      </div>
-      <p class="cd-note rv" data-d="3">Midnight · Los Angeles time</p>
-    </div>
-  </section>
-
-  <section class="final" aria-labelledby="finalH">
-    <div class="final-photo" data-par="0.12" aria-hidden="true"></div>
-    <p class="eyebrow rv">Early access</p>
-    <h2 class="h2 rv" data-d="1" id="finalH">Your family. Your empire.<br><em>Your California.</em></h2>
-    <p class="lede rv" data-d="2">Claim your name before the streets open — and bring your crew in with you.</p>
-    <button class="btn btn-sun rv" data-d="3" data-open>Claim your name <svg aria-hidden="true"><use href="#i-arrow"/></svg></button>
-  </section>
-</main>
-
-<footer>
+<div class="strip" role="note">
   <div class="wrap">
-    <div class="ft">
-      <a class="ft-logo" href="#top" aria-label="Gangsters — back to top"><picture><source srcset="assets/logo-1200.webp" type="image/webp"><img src="assets/logo.png" alt="" width="2161" height="728" loading="lazy"></picture></a>
-      <nav class="ft-links" aria-label="Footer">
-        <a href="#roles">Sides</a><a href="#empire">Empire</a><a href="#cities">California</a>
-        <button class="linkbtn" data-legal="terms">Legal</button>
-        <button class="linkbtn" data-legal="privacy">Privacy</button>
-        <a href="https://foryougaming.com" target="_blank" rel="noopener noreferrer">ForYouGaming ↗</a>
-      </nav>
+    <span>Server: <b class="closed">Closed</b></span>
+    <span>Opens: <b>27 Dec 2027 · 00:00 LA</b></span>
+    <span>Early access: <b>Open</b></span>
+    <span class="ios"><svg aria-hidden="true"><use href="#i-apple"/></svg><b>iPhone · iPhone Duo · iPad</b></span>
+  </div>
+</div>
+
+<div class="wrap og" id="top">
+  <section class="stage" aria-label="Gangsters: The American Dream">
+    <div class="art" role="img" aria-label="Night parking lot: one man under a car, another keeping watch"></div>
+    <div class="tint" aria-hidden="true"></div>
+    <div class="scan" aria-hidden="true"></div>
+    <span class="stage-tag" aria-hidden="true">● California · 7 cities · multiplayer</span>
+    <div class="stage-in">
+      <h1><picture><source srcset="assets/logo-red-1200.webp" type="image/webp"><img src="assets/logo-red.png" alt="Gangsters" width="2161" height="728" fetchpriority="high"></picture></h1>
+      <p class="dream">The American Dream</p>
+      <p class="sub">Build your criminal empire and <b>take over California.</b> Steal cars, pull heists, run a family — or wear the badge and take a cut.</p>
+      <div class="chips" aria-label="Sides">
+        <span class="chip r">Criminal</span><span class="chip">Police</span><span class="chip">Scientist</span><span class="chip">Coming 27·12·2027</span>
+      </div>
     </div>
-    <div class="ft-small">
-      <span>© 2026 <a href="https://foryougaming.com" target="_blank" rel="noopener noreferrer"><strong>ForYouGaming Inc.</strong></a> · Gangsters name and brand licensed from Forest Road Capital B.V. · Fictional entertainment.</span>
-      <span class="ios"><svg aria-hidden="true"><use href="#i-apple"/></svg>Built for iPhone, iPhone Duo &amp; iPad</span>
+  </section>
+
+  <aside class="pn" aria-labelledby="hClaimH" style="margin:0">
+    <h2 class="ph" id="hClaimH">Claim your name <small>Early access</small></h2>
+    <div class="pb">
+      <form id="hForm" novalidate>
+        <fieldset class="seg">
+          <legend class="sr">Player type</legend>
+          <label><input type="radio" name="role" value="Criminal" checked><span>Criminal</span></label>
+          <label><input type="radio" name="role" value="Police"><span>Police</span></label>
+          <label><input type="radio" name="role" value="Scientist"><span>Scientist</span></label>
+        </fieldset>
+        <p class="rdesc" data-rdesc aria-live="polite">Steal cars, pull heists and run a crime family.</p>
+        <label class="l" for="hName">Player name</label>
+        <input class="f" id="hName" data-name minlength="3" maxlength="20" pattern="[A-Za-z0-9_]{3,20}" title="3–20 characters: letters, numbers or _" autocomplete="nickname" autocapitalize="off" spellcheck="false" placeholder="Gangster name" required>
+        <label class="l" for="hCity">Starting city</label>
+        <select class="f" id="hCity" data-city required><option value="" disabled selected>Choose your city</option></select>
+        <label class="l" for="hEmail">Email</label>
+        <input class="f" id="hEmail" data-email type="email" autocomplete="email" inputmode="email" placeholder="you@email.com" required>
+        <p class="err" data-err role="alert" hidden></p>
+        <button class="btn wide" type="submit" style="margin-top:14px">Join early access</button>
+        <p class="consent">By joining you agree to our <button type="button" class="ilnk" data-legal="terms">Terms</button> and <button type="button" class="ilnk" data-legal="privacy">Privacy Policy</button>.</p>
+      </form>
+      <div data-done hidden>
+        <p class="ok" data-ok tabindex="-1"></p>
+        <button class="btn wide ghost" type="button" data-share style="margin-top:10px">Recruit your crew</button>
+        <p class="consent" data-share-note>Bring your friends in before the streets open.</p>
+      </div>
     </div>
+  </aside>
+</div>
+
+<div class="wrap lay">
+  <aside class="side" aria-label="Sidebar">
+    <div class="pn menu-pn">
+      <h2 class="ph">Menu</h2>
+      <ul class="menu">
+        <li><a href="#top">Home</a></li>
+        <li><a href="#sides">Pick a side</a></li>
+        <li><a href="#empire">Empire</a></li>
+        <li><a href="#ranks">Ranks</a></li>
+        <li><a href="#cities">Cities</a></li>
+        <li><a href="#launch">Launch</a></li>
+        <li><button type="button" data-open>Claim your name</button></li>
+        <li><button type="button" data-legal="terms">Terms</button></li>
+        <li><button type="button" data-legal="privacy">Privacy</button></li>
+      </ul>
+    </div>
+    <div class="pn">
+      <h2 class="ph">Los Angeles</h2>
+      <div class="pb la"><div class="t" id="laTime2">--:--</div><div class="d" id="laDate">—</div></div>
+    </div>
+    <div class="pn">
+      <h2 class="ph">Game info</h2>
+      <table class="kv">
+        <tr><th>Title</th><td>Gangsters: The American Dream</td></tr>
+        <tr><th>Release</th><td>27 Dec 2027</td></tr>
+        <tr><th>Platform</th><td>iPhone, iPhone Duo, iPad</td></tr>
+        <tr><th>Mode</th><td>Multiplayer</td></tr>
+        <tr><th>Publisher</th><td><a href="https://foryougaming.com" target="_blank" rel="noopener noreferrer">ForYouGaming Inc.</a></td></tr>
+        <tr><th>License</th><td>Forest Road Capital B.V.</td></tr>
+      </table>
+    </div>
+  </aside>
+
+  <main id="main">
+    <section class="pn" id="sides" aria-labelledby="sidesH">
+      <h2 class="ph" id="sidesH">Pick a side <small>3 roles</small></h2>
+      <div class="intro">
+        <p>Every player picks a side before the streets open. Each one plays California differently — and every side needs the other two.</p>
+      </div>
+      <div class="sides">
+        <article class="sd">
+          <span class="sd-k">01 · The Family</span>
+          <h3>Criminal</h3>
+          <p class="ln">Start with a stolen car. End with the coast.</p>
+          <ul><li>Steal cars and pull heists</li><li>Build and run a crime family</li><li>Own the poker rooms, the clubs, the block</li></ul>
+          <button class="btn sm" data-open data-role="Criminal">Play criminal</button>
+        </article>
+        <article class="sd cop">
+          <span class="sd-k">02 · The Badge</span>
+          <h3>Dirty Cop</h3>
+          <p class="ln">The badge opens doors. You decide which ones stay shut.</p>
+          <ul><li>Raid the families</li><li>Or take a cut and look away</li><li>Work both sides of the law</li></ul>
+          <button class="btn sm" data-open data-role="Police">Play police</button>
+        </article>
+        <article class="sd sci">
+          <span class="sd-k">03 · The Lab</span>
+          <h3>Scientist</h3>
+          <p class="ln">Purity is power. Everyone needs you. Nobody trusts you.</p>
+          <ul><li>Cook the purest product in California</li><li>Sell to the families and the cops</li><li>Stay neutral — get rich off both</li></ul>
+          <button class="btn sm" data-open data-role="Scientist">Play scientist</button>
+        </article>
+      </div>
+    </section>
+
+    <section class="pn" id="empire" aria-labelledby="empireH">
+      <h2 class="ph">Empire <small>8 systems</small></h2>
+      <div class="ban">
+        <div class="art" style="background-image:url(assets/packages.webp)" role="img" aria-label="Two people carrying stolen packages off a porch"></div>
+        <div class="cap"><h2 class="big" id="empireH">Everything a kingpin <em>could want.</em></h2><p>Steal it, stack it, own it. Then hold on to it.</p></div>
+      </div>
+      <table class="grid">
+        <tr><td class="it"><span class="num">01</span><h3>Heists &amp; Cars</h3><p>Steal cars off the street and pull heists that put your name in the papers.</p></td>
+            <td class="it"><span class="num">02</span><h3>Crime Family</h3><p>Recruit your crew, run a family and rise together — or fall together.</p></td></tr>
+        <tr><td class="it"><span class="num">03</span><h3>Territory</h3><p>Take blocks, hold neighborhoods and push your colors across the state.</p></td>
+            <td class="it"><span class="num">04</span><h3>Businesses</h3><p>Own poker rooms, nightclubs and underground businesses that keep the money moving.</p></td></tr>
+        <tr><td class="it"><span class="num">05</span><h3>Cash &amp; Diamonds</h3><p>Stack cash. Stack diamonds. Spend like the dream depends on it.</p></td>
+            <td class="it"><span class="num">06</span><h3>The Fleet</h3><p>Supercars in the garage, a yacht in the marina, a mansion on the hill.</p></td></tr>
+        <tr><td class="it"><span class="num">07</span><h3>Reputation</h3><p>Every move builds your name. Make it one all of California remembers.</p></td>
+            <td class="it"><span class="num">08</span><h3>Multiplayer California</h3><p>Real players. Real rivals. Real alliances. One state up for grabs.</p></td></tr>
+      </table>
+    </section>
+
+    <section class="pn" id="ranks" aria-labelledby="ranksH">
+      <h2 class="ph" id="ranksH">From the curb to the coast <small>Ranks</small></h2>
+      <table class="rk">
+        <thead><tr><th scope="col">Rank</th><th scope="col">Stage</th><th scope="col">What it takes</th><th scope="col"><span class="sr">Progress</span></th></tr></thead>
+        <tbody>
+          <tr><td>01</td><td>Hustle</td><td>Boost your first car. Make your first enemy. Get noticed.</td><td><div class="bar"><i style="width:25%"></i></div></td></tr>
+          <tr><td>02</td><td>Crew</td><td>Recruit the right people and pull the jobs that make headlines.</td><td><div class="bar"><i style="width:50%"></i></div></td></tr>
+          <tr><td>03</td><td>Family</td><td>Run businesses, take territory and put your name on the map.</td><td><div class="bar"><i style="width:75%"></i></div></td></tr>
+          <tr><td>04</td><td>Empire</td><td>Yachts. Mansions. Supercars. The whole state answering to you.</td><td><div class="bar"><i style="width:100%"></i></div></td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="pn" id="cities" aria-labelledby="citiesH">
+      <h2 class="ph" id="citiesH">California <small>Pick where it starts</small></h2>
+      <div class="cw">
+        <table class="ct">
+          <thead><tr><th scope="col">City · turf</th></tr></thead>
+          <tbody id="cityRows"></tbody>
+        </table>
+        <div class="cbox">
+          <div class="ph2" role="img" aria-label="Shoplifters running from a store with a guard behind them"></div>
+          <div class="cd" aria-live="polite">
+            <div><span class="tg" id="cTag"></span><b id="cName"></b></div>
+            <p id="cLine"></p>
+            <button class="btn wide" id="cityGo" data-open>Start in <span id="cGo">LA</span></button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="pn" id="launch" aria-labelledby="launchH">
+      <h2 class="ph" id="launchH">Streets open in <small>27 Dec 2027</small></h2>
+      <div class="hud" role="timer" aria-label="Countdown to launch">
+        <div class="hud-row">
+          <div class="hu"><span class="hv" id="cdD">---</span><span class="hl">Days</span></div><span class="colon" aria-hidden="true">:</span>
+          <div class="hu"><span class="hv" id="cdH">--</span><span class="hl">Hrs</span></div><span class="colon" aria-hidden="true">:</span>
+          <div class="hu"><span class="hv" id="cdM">--</span><span class="hl">Min</span></div><span class="colon" aria-hidden="true">:</span>
+          <div class="hu"><span class="hv" id="cdS">--</span><span class="hl">Sec</span></div>
+        </div>
+        <p class="hud-note">Midnight · <b>Los Angeles time</b></p>
+      </div>
+    </section>
+
+    <div class="fin">
+      <div><h2 class="big" style="margin:0">Your family. Your empire. <em>Your California.</em></h2><p>Claim your name before the streets open — and bring your crew in with you.</p></div>
+      <button class="btn" data-open>Claim your name</button>
+    </div>
+  </main>
+</div>
+
+<footer class="wrap">
+  <div class="ft">
+    <span>© 2026 <a href="https://foryougaming.com" target="_blank" rel="noopener noreferrer"><b>ForYouGaming Inc.</b></a> · Gangsters name and brand licensed from Forest Road Capital B.V. · Fictional entertainment.</span>
+    <nav aria-label="Footer">
+      <button class="lnk" data-legal="terms">Terms</button>
+      <button class="lnk" data-legal="privacy">Privacy</button>
+      <a href="https://foryougaming.com" target="_blank" rel="noopener noreferrer">ForYouGaming ↗</a>
+    </nav>
   </div>
 </footer>
 
-<dialog id="modal" aria-labelledby="mTitle" aria-describedby="mDesc">
-  <div class="modal-card">
-    <button class="close" data-close aria-label="Close">×</button>
-    <div class="kicker">Early Access</div>
-    <h3 id="mTitle">Choose your side.</h3>
-    <p id="mDesc">Pick who you are, your name and the city where your story starts. The streets open December 27, 2027.</p>
-    <form id="form" novalidate>
-      <fieldset class="roles">
-        <legend class="sr">Player type</legend>
-        <label class="role"><input type="radio" name="role" value="Criminal" checked><span>Criminal</span></label>
-        <label class="role"><input type="radio" name="role" value="Police"><span>Police</span></label>
-        <label class="role"><input type="radio" name="role" value="Scientist"><span>Scientist</span></label>
-      </fieldset>
-      <p class="role-desc" id="roleDesc" aria-live="polite">Steal cars, pull heists and run a crime family.</p>
-      <label class="sr" for="name">Player name</label>
-      <input class="field" id="name" minlength="3" maxlength="20" pattern="[A-Za-z0-9_]{3,20}" title="3–20 characters: letters, numbers or _" autocomplete="nickname" autocapitalize="off" spellcheck="false" placeholder="Gangster name" required>
-      <label class="sr" for="city">Starting city</label>
-      <select class="field select" id="city" required><option value="" disabled selected>Choose your starting city</option></select>
-      <label class="sr" for="email">Email address</label>
-      <input class="field" id="email" type="email" autocomplete="email" inputmode="email" placeholder="Email address" required>
-      <p class="err" id="formErr" role="alert" hidden></p>
-      <button class="btn-form" type="submit">Join Early Access</button>
-      <p class="consent">By joining you agree to our <button type="button" class="inline-link" data-legal="terms">Terms</button> and <button type="button" class="inline-link" data-legal="privacy">Privacy Policy</button>.</p>
-    </form>
-    <div id="done" hidden>
-      <p id="success" class="success" tabindex="-1"></p>
-      <button class="btn-form" type="button" id="share">Recruit your crew</button>
-      <p class="consent" id="shareNote">Bring your friends in before the streets open.</p>
+<dialog id="modal" aria-labelledby="mTitle">
+  <div class="dlg">
+    <div class="ph"><span id="mTitle">Claim your name</span><button class="x" data-close aria-label="Close">×</button></div>
+    <div class="pb">
+      <p id="mDesc" style="color:#bbb;margin:0 0 12px;font-size:12px">Pick your side, your name and the city where your story starts. The streets open December 27, 2027.</p>
+      <form id="mForm" novalidate>
+        <fieldset class="seg">
+          <legend class="sr">Player type</legend>
+          <label><input type="radio" name="role" value="Criminal" checked><span>Criminal</span></label>
+          <label><input type="radio" name="role" value="Police"><span>Police</span></label>
+          <label><input type="radio" name="role" value="Scientist"><span>Scientist</span></label>
+        </fieldset>
+        <p class="rdesc" data-rdesc aria-live="polite">Steal cars, pull heists and run a crime family.</p>
+        <label class="l" for="mName">Player name</label>
+        <input class="f" id="mName" data-name minlength="3" maxlength="20" pattern="[A-Za-z0-9_]{3,20}" title="3–20 characters: letters, numbers or _" autocomplete="nickname" autocapitalize="off" spellcheck="false" placeholder="Gangster name" required>
+        <label class="l" for="mCity">Starting city</label>
+        <select class="f" id="mCity" data-city required><option value="" disabled selected>Choose your city</option></select>
+        <label class="l" for="mEmail">Email</label>
+        <input class="f" id="mEmail" data-email type="email" autocomplete="email" inputmode="email" placeholder="you@email.com" required>
+        <p class="err" data-err role="alert" hidden></p>
+        <button class="btn wide" type="submit" style="margin-top:14px">Join early access</button>
+        <p class="consent">By joining you agree to our <button type="button" class="ilnk" data-legal="terms">Terms</button> and <button type="button" class="ilnk" data-legal="privacy">Privacy Policy</button>.</p>
+      </form>
+      <div data-done hidden>
+        <p class="ok" data-ok tabindex="-1"></p>
+        <button class="btn wide ghost" type="button" data-share style="margin-top:10px">Recruit your crew</button>
+        <p class="consent" data-share-note>Bring your friends in before the streets open.</p>
+      </div>
     </div>
   </div>
 </dialog>
+
 <dialog id="termsModal" aria-labelledby="termsTitle">
-  <div class="legal-card">
-    <div class="legal-head">
-      <div><h3 id="termsTitle">Terms of Service</h3><small>Gangsters · Effective August 27, 2026</small></div>
-      <button class="legal-close" data-legal-close aria-label="Close">×</button>
-    </div>
-    <div class="legal-body">
+  <div class="dlg lg">
+    <div class="ph"><span id="termsTitle">Terms of Service</span><button class="x" data-legal-close aria-label="Close">×</button></div>
+    <div class="legal">
+<small>Gangsters · Effective August 27, 2026</small>
 <h4>1. Agreement</h4>
 <p>These Terms of Service govern your use of Gangsters, including the iOS app, website, game services, accounts, virtual items and related features. Gangsters is published and operated by ForYouGaming Inc., 260 Newport Center Drive, Ste 100, Newport Beach, CA 92660, USA.</p>
 
@@ -668,17 +597,15 @@ dialog[open]{animation:pop .45s var(--ease)}
 
 <h4>14. Contact</h4>
 <p>ForYouGaming Inc.<br>260 Newport Center Drive, Ste 100<br>Newport Beach, CA 92660, USA</p>
-</div>
+    </div>
   </div>
 </dialog>
 
 <dialog id="privacyModal" aria-labelledby="privacyTitle">
-  <div class="legal-card">
-    <div class="legal-head">
-      <div><h3 id="privacyTitle">Privacy Policy</h3><small>Gangsters · Effective August 27, 2026</small></div>
-      <button class="legal-close" data-legal-close aria-label="Close">×</button>
-    </div>
-    <div class="legal-body">
+  <div class="dlg lg">
+    <div class="ph"><span id="privacyTitle">Privacy Policy</span><button class="x" data-legal-close aria-label="Close">×</button></div>
+    <div class="legal">
+<small>Gangsters · Effective August 27, 2026</small>
 <h4>1. Who We Are</h4>
 <p>Gangsters is published and operated by ForYouGaming Inc., 260 Newport Center Drive, Ste 100, Newport Beach, CA 92660, USA. Certain game intellectual property is licensed from Forest Road Capital B.V., Amsterdam.</p>
 
@@ -714,172 +641,110 @@ dialog[open]{animation:pop .45s var(--ease)}
 
 <h4>12. Contact</h4>
 <p>ForYouGaming Inc.<br>260 Newport Center Drive, Ste 100<br>Newport Beach, CA 92660, USA</p>
-</div>
+    </div>
   </div>
 </dialog>
+
 <script>
 (() => {
 'use strict';
 const $ = (s, r = document) => r.querySelector(s), $$ = (s, r = document) => [...r.querySelectorAll(s)];
-const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-/* ===== live LA time + weather (Open-Meteo) ===== */
-const tEl = $('#laTime');
-const fmt = new Intl.DateTimeFormat('en-US', { timeZone: 'America/Los_Angeles', hour: 'numeric', minute: '2-digit' });
-const tick = () => { tEl.textContent = fmt.format(new Date()); };
+/* LA time */
+const tf = new Intl.DateTimeFormat('en-US', { timeZone: 'America/Los_Angeles', hour: 'numeric', minute: '2-digit' });
+const df = new Intl.DateTimeFormat('en-US', { timeZone: 'America/Los_Angeles', weekday: 'short', month: 'short', day: 'numeric', year: 'numeric' });
+const tick = () => { const n = new Date(), t = tf.format(n); $('#laTime').textContent = t; $('#laTime2').textContent = t; $('#laDate').textContent = df.format(n) + ' · PT'; };
 tick(); setInterval(tick, 15000);
-const S = 'fill="none" stroke="#f0d0a4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"';
-const I = {
-  sun: `<svg viewBox="0 0 24 24" ${S}><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.2M12 19.3v2.2M2.5 12h2.2M19.3 12h2.2M5.3 5.3l1.6 1.6M17.1 17.1l1.6 1.6M5.3 18.7l1.6-1.6M17.1 6.9l1.6-1.6"/></svg>`,
-  moon: `<svg viewBox="0 0 24 24" ${S}><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/></svg>`,
-  cloud: `<svg viewBox="0 0 24 24" ${S}><path d="M7 18h10a4 4 0 0 0 .4-8A6 6 0 0 0 6 11a3.5 3.5 0 0 0 1 7z"/></svg>`,
-  fog: `<svg viewBox="0 0 24 24" ${S}><path d="M4 9h16M3 13h18M5 17h14"/></svg>`,
-  rain: `<svg viewBox="0 0 24 24" ${S}><path d="M7 15h10a4 4 0 0 0 .4-8A6 6 0 0 0 6 8a3.5 3.5 0 0 0 1 7z"/><path d="M9 18l-1 3M13 18l-1 3M17 18l-1 3"/></svg>`,
-  storm: `<svg viewBox="0 0 24 24" ${S}><path d="M7 15h10a4 4 0 0 0 .4-8A6 6 0 0 0 6 8a3.5 3.5 0 0 0 1 7z"/><path d="M12 15l-2 4h3l-2 3"/></svg>`
-};
-const pick = (c, day) => c <= 1 ? (day ? I.sun : I.moon) : c <= 3 ? I.cloud : c <= 48 ? I.fog : c >= 95 ? I.storm : I.rain;
-const label = c => c === 0 ? 'Clear' : c <= 2 ? 'Mostly clear' : c === 3 ? 'Cloudy' : c <= 48 ? 'Fog' : c >= 95 ? 'Storm' : 'Rain';
-async function weather() {
-  try {
-    const r = await fetch('https://api.open-meteo.com/v1/forecast?latitude=34.0522&longitude=-118.2437&current=temperature_2m,weather_code,is_day&temperature_unit=fahrenheit&timezone=America%2FLos_Angeles');
-    if (!r.ok) return;
-    const cur = (await r.json()).current;
-    $('#laIcon').innerHTML = pick(cur.weather_code, cur.is_day === 1);
-    $('#laTemp').textContent = Math.round(cur.temperature_2m) + '°F';
-    const wx = $('#laWx'); wx.title = label(cur.weather_code); wx.hidden = false;
-  } catch (e) { /* time alone still shows */ }
-}
-weather(); setInterval(weather, 10 * 60 * 1000);
 
-/* ===== header state + parallax ===== */
-const hdr = $('#hdr'), hdrHidden = [$('.hdr-logo'), $('.hdr-right')], heroPhoto = $('#heroPhoto'), par = $$('[data-par]');
-let solid = null, ticking = false;
-function onScroll() {
-  const y = scrollY, vh = innerHeight, s = y > vh * 0.55;
-  if (s !== solid) { solid = s; hdr.classList.toggle('solid', s); hdrHidden.forEach(el => el.inert = !s); }
-  if (!reduce) {
-    if (y < vh * 1.3) heroPhoto.style.transform = `translate3d(0,${y * 0.3}px,0)`;
-    par.forEach(el => {
-      const r = el.parentElement.getBoundingClientRect();
-      if (r.bottom > 0 && r.top < vh) el.style.transform = `translate3d(0,${(r.top + r.height / 2 - vh / 2) * -el.dataset.par}px,0)`;
-    });
-  }
-  ticking = false;
-}
-addEventListener('scroll', () => { if (!ticking) { ticking = true; requestAnimationFrame(onScroll); } }, { passive: true });
-addEventListener('resize', onScroll);
-onScroll();
-
-/* ===== scroll reveal ===== */
-if ('IntersectionObserver' in window && !reduce) {
-  const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }), { rootMargin: '0px 0px -8% 0px', threshold: 0.08 });
-  $$('.rv').forEach(el => io.observe(el));
-} else $$('.rv').forEach(el => el.classList.add('in'));
-
-/* ===== cities ===== */
+/* cities */
 const CITIES = [
-  { id: 'Los Angeles', tag: 'the streets', line: 'The streets. Where every empire on the coast gets its start.', x: 264.4, y: 417.5, lx: -12, ly: -10, a: 'end' },
-  { id: 'Newport Beach', tag: 'old money', line: 'Old money and harbor views — with secrets worth more than the yachts.', x: 276.8, y: 439, lx: -10, ly: 16, a: 'end' },
-  { id: 'San Francisco', tag: 'tech cash', line: 'Tech cash moves fast up here. Learn to move faster.', x: 97.2, y: 231.5, lx: -10, ly: 14, a: 'end' },
-  { id: 'Oakland', tag: 'the port', line: 'The port. Whatever comes into California comes through here first.', x: 103.2, y: 230, lx: 12, ly: 4, a: 'start' },
-  { id: 'San Diego', tag: 'the border', line: 'The border. Whoever runs the crossings runs the supply.', x: 307.6, y: 484, lx: -12, ly: 4, a: 'end' },
-  { id: 'Sacramento', tag: 'politics', line: 'Politics. Buy the right people and the whole state looks away.', x: 134.4, y: 191, lx: 12, ly: 4, a: 'start' },
-  { id: 'Palm Springs', tag: 'casinos', line: 'Casinos in the desert. The house always wins — so become the house.', x: 332, y: 428.5, lx: 12, ly: 4, a: 'start' }
+  { id: 'Los Angeles', s: 'LA', tag: 'The streets', line: 'The streets. Where every empire on the coast gets its start.' },
+  { id: 'Newport Beach', s: 'Newport', tag: 'Old money', line: 'Old money and harbor views — with secrets worth more than the yachts.' },
+  { id: 'San Francisco', s: 'SF', tag: 'Tech cash', line: 'Tech cash moves fast up here. Learn to move faster.' },
+  { id: 'Oakland', s: 'Oakland', tag: 'The port', line: 'The port. Whatever comes into California comes through here first.' },
+  { id: 'San Diego', s: 'San Diego', tag: 'The border', line: 'The border. Whoever runs the crossings runs the supply.' },
+  { id: 'Sacramento', s: 'Sacramento', tag: 'Politics', line: 'Politics. Buy the right people and the whole state looks away.' },
+  { id: 'Palm Springs', s: 'Palm Springs', tag: 'Casinos', line: 'Casinos in the desert. The house always wins — so become the house.' }
 ];
-const citySel = $('#city'), list = $('#cityList'), pins = $('#pins'), NS = 'http://www.w3.org/2000/svg';
-let shownCity = 'Los Angeles', chosenCity = '';
+const rows = $('#cityRows');
+let shown = 'Los Angeles', chosen = '';
 CITIES.forEach((c, i) => {
-  citySel.insertAdjacentHTML('beforeend', `<option value="${c.id}">${c.id} · ${c.tag}</option>`);
-  const li = document.createElement('li'); li.className = 'city'; li.dataset.city = c.id;
-  li.innerHTML = `<button type="button" aria-pressed="false"><span class="n">0${i + 1}</span><strong>${c.id}</strong><span class="fl">${c.tag}</span></button>`;
-  list.appendChild(li);
-  const g = document.createElementNS(NS, 'g');
-  g.setAttribute('class', 'pin'); g.dataset.city = c.id; g.setAttribute('tabindex', '0'); g.setAttribute('role', 'button'); g.setAttribute('aria-label', `${c.id}, ${c.tag}`);
-  g.innerHTML = `<circle class="halo" cx="${c.x}" cy="${c.y}" r="9"/><circle cx="${c.x}" cy="${c.y}" r="16" fill="transparent"/><circle class="r" cx="${c.x}" cy="${c.y}" r="4.5"/><text class="lbl" x="${c.x + c.lx}" y="${c.y + c.ly}" text-anchor="${c.a}">${c.id}</text>`;
-  pins.appendChild(g);
+  $$('[data-city]').forEach(s => s.insertAdjacentHTML('beforeend', `<option value="${c.id}">${c.id} · ${c.tag}</option>`));
+  rows.insertAdjacentHTML('beforeend', `<tr data-c="${c.id}"><td><button type="button" aria-pressed="false"><span class="cidx">0${i + 1}</span><span class="mk" aria-hidden="true"></span><span class="cn">${c.id}</span><span class="cf">${c.tag}</span></button></td></tr>`);
 });
 function showCity(id, choose) {
   const c = CITIES.find(x => x.id === id); if (!c) return;
-  shownCity = id; if (choose) { chosenCity = id; citySel.value = id; }
-  $$('.city').forEach(el => { const on = el.dataset.city === id; el.classList.toggle('on', on); $('button', el).setAttribute('aria-pressed', on); });
-  $$('.pin').forEach(el => el.classList.toggle('on', el.dataset.city === id));
-  $('#cityDetail').innerHTML = `<b>${c.id} <span class="mono" style="font-size:11px;letter-spacing:.14em;color:var(--pink-hi);text-transform:uppercase;font-weight:700">· ${c.tag}</span></b>${c.line}`;
-  $('#cityGoTxt').textContent = `Start in ${c.id}`;
+  shown = id;
+  if (choose) { chosen = id; $$('[data-city]').forEach(s => { if (!s.closest('form').hidden) s.value = id; }); }
+  $$('tr[data-c]', rows).forEach(r => { const on = r.dataset.c === id; r.classList.toggle('on', on); $('button', r).setAttribute('aria-pressed', on); });
+  $('#cTag').textContent = c.tag; $('#cName').textContent = c.id; $('#cLine').textContent = c.line; $('#cGo').textContent = c.s;
 }
-list.addEventListener('click', e => { const li = e.target.closest('.city'); if (li) showCity(li.dataset.city, true); });
-pins.addEventListener('click', e => { const g = e.target.closest('.pin'); if (g) showCity(g.dataset.city, true); });
-pins.addEventListener('keydown', e => { const g = e.target.closest('.pin'); if (g && (e.key === 'Enter' || e.key === ' ')) { e.preventDefault(); showCity(g.dataset.city, true); } });
+rows.addEventListener('click', e => { const r = e.target.closest('tr[data-c]'); if (r) showCity(r.dataset.c, true); });
 showCity('Los Angeles', false);
-// "Start in X" always commits the city currently shown (runs before the generic opener)
-$('#cityGo').addEventListener('click', () => showCity(shownCity, true));
+$('#cityGo').addEventListener('click', () => showCity(shown, true));
 
-/* ===== countdown: Dec 27, 2027 00:00 America/Los_Angeles (PST, UTC-8) ===== */
-const LAUNCH = Date.parse('2027-12-27T00:00:00-08:00');
-const pad = n => String(n).padStart(2, '0');
-const cdEls = { d: $('#cdD'), h: $('#cdH'), m: $('#cdM'), s: $('#cdS') };
+/* countdown: Dec 27, 2027 00:00 America/Los_Angeles (PST, UTC-8) */
+const LAUNCH = Date.parse('2027-12-27T00:00:00-08:00'), pad = n => String(n).padStart(2, '0');
+const E = { d: $('#cdD'), h: $('#cdH'), m: $('#cdM'), s: $('#cdS') };
 function cd() {
   let s = Math.max(0, Math.floor((LAUNCH - Date.now()) / 1000));
   const d = Math.floor(s / 86400); s %= 86400;
-  cdEls.d.textContent = d; cdEls.h.textContent = pad(Math.floor(s / 3600));
-  cdEls.m.textContent = pad(Math.floor(s % 3600 / 60)); cdEls.s.textContent = pad(s % 60);
+  E.d.textContent = d; E.h.textContent = pad(Math.floor(s / 3600)); E.m.textContent = pad(Math.floor(s % 3600 / 60)); E.s.textContent = pad(s % 60);
 }
 cd(); setInterval(cd, 1000);
 
-/* ===== dialogs ===== */
-const lockScroll = () => { document.documentElement.style.overflow = $$('dialog').some(d => d.open) ? 'hidden' : ''; };
-$$('dialog').forEach(d => {
-  d.addEventListener('close', lockScroll);
-  d.addEventListener('click', e => { if (e.target === d) d.close(); }); // backdrop click
-});
+/* dialogs */
+const lock = () => { document.documentElement.style.overflow = $$('dialog').some(d => d.open) ? 'hidden' : ''; };
+$$('dialog').forEach(d => { d.addEventListener('close', lock); d.addEventListener('click', e => { if (e.target === d) d.close(); }); });
 
-/* ===== early access ===== */
+/* early access forms (hero + modal) */
 const ROLES = {
   Criminal: { desc: 'Steal cars, pull heists and run a crime family.', ph: 'Gangster name' },
   Police: { desc: 'A dirty cop. Raid the families, or take a cut and look away.', ph: 'Officer name' },
   Scientist: { desc: 'A rogue scientist. Cook the purest product in California and sell to both sides.', ph: 'Scientist name' }
 };
-const modal = $('#modal'), form = $('#form'), err = $('#formErr'), nameEl = $('#name'), emailEl = $('#email');
-function setRole(v) {
-  const r = form.querySelector(`input[name=role][value="${v}"]`); if (!r || !ROLES[v]) return;
-  r.checked = true; $('#roleDesc').textContent = ROLES[v].desc; nameEl.placeholder = ROLES[v].ph;
+function wire(form) {
+  const box = form.parentElement, nm = $('[data-name]', form), ct = $('[data-city]', form), em = $('[data-email]', form), err = $('[data-err]', form);
+  const setRole = v => { const r = $(`input[name=role][value="${v}"]`, form); if (!r || !ROLES[v]) return; r.checked = true; $('[data-rdesc]', form).textContent = ROLES[v].desc; nm.placeholder = ROLES[v].ph; };
+  $$('input[name=role]', form).forEach(r => r.addEventListener('change', () => setRole(r.value)));
+  form.addEventListener('submit', e => {
+    e.preventDefault();
+    const bad = [nm, ct, em].find(f => !f.checkValidity());
+    if (bad) {
+      err.textContent = bad === nm ? 'Name: 3–20 characters — letters, numbers or _.' : bad === ct ? 'Pick the city where your story starts.' : 'Enter a valid email address.';
+      err.hidden = false; bad.setAttribute('aria-invalid', 'true'); bad.focus(); return;
+    }
+    err.hidden = true; [nm, ct, em].forEach(f => f.removeAttribute('aria-invalid'));
+    const role = $('input[name=role]:checked', form).value, name = nm.value.trim(), city = ct.value, email = em.value.trim();
+    // TODO: send { role, name, city, email } to the signup backend here (POST; handle taken names + errors before showing success).
+    void email;
+    const ok = $('[data-ok]', box);
+    ok.innerHTML = '';
+    const b = document.createElement('b'); b.textContent = name;
+    ok.append(b, ` — your name is reserved. You start as ${role === 'Police' ? 'a cop' : role === 'Scientist' ? 'a scientist' : 'a criminal'} in ${city}.`);
+    form.hidden = true; $('[data-done]', box).hidden = false; ok.focus();
+    if (form.id === 'mForm') $('#mTitle').textContent = 'Welcome to California';
+  });
+  $('[data-share]', box).addEventListener('click', async () => {
+    const data = { title: 'Gangsters', text: 'I just claimed my name in Gangsters. Take over California with me.', url: 'https://gangsters.com/' }, note = $('[data-share-note]', box);
+    try { if (navigator.share) { await navigator.share(data); return; } await navigator.clipboard.writeText(data.url); note.textContent = 'Link copied. Send it to your crew.'; }
+    catch (er) { if (er && er.name !== 'AbortError') note.textContent = 'gangsters.com — send it to your crew.'; }
+  });
+  return { setRole, nm, ct, form };
 }
-$$('input[name=role]').forEach(r => r.addEventListener('change', () => setRole(r.value)));
+const hero = wire($('#hForm')), mod = wire($('#mForm')), modal = $('#modal');
 $$('[data-open]').forEach(el => el.addEventListener('click', () => {
-  if (el.dataset.role) setRole(el.dataset.role);
-  if (chosenCity) citySel.value = chosenCity;
+  if (el.dataset.role) mod.setRole(el.dataset.role);
+  if (chosen) mod.ct.value = chosen;
   if (!modal.open) modal.showModal();
-  lockScroll();
-  requestAnimationFrame(() => (form.hidden ? $('#share') : nameEl).focus());
+  lock();
+  requestAnimationFrame(() => (mod.form.hidden ? $('[data-share]', modal) : mod.nm).focus());
 }));
 $$('[data-close]').forEach(el => el.addEventListener('click', () => modal.close()));
-form.addEventListener('submit', e => {
-  e.preventDefault();
-  const bad = [nameEl, citySel, emailEl].find(f => !f.checkValidity());
-  if (bad) {
-    err.textContent = bad === nameEl ? 'Name: 3–20 characters — letters, numbers or _.' : bad === citySel ? 'Pick the city where your story starts.' : 'Enter a valid email address.';
-    err.hidden = false; bad.setAttribute('aria-invalid', 'true'); bad.focus(); return;
-  }
-  err.hidden = true; [nameEl, citySel, emailEl].forEach(f => f.removeAttribute('aria-invalid'));
-  const role = form.querySelector('input[name=role]:checked').value, name = nameEl.value.trim(), city = citySel.value, email = emailEl.value.trim();
-  // TODO: send { role, name, city, email } to the signup backend here (POST; handle taken names + errors before showing success).
-  void email;
-  $('#success').textContent = `${name}, your name is reserved. You start as ${role === 'Police' ? 'a cop' : role === 'Scientist' ? 'a scientist' : 'a criminal'} in ${city}.`;
-  $('#mTitle').textContent = 'Welcome to California.';
-  form.hidden = true; $('#done').hidden = false; $('#success').focus();
-});
-$('#share').addEventListener('click', async () => {
-  const data = { title: 'Gangsters', text: 'I just claimed my name in Gangsters. Take over California with me.', url: 'https://gangsters.com/' };
-  const note = $('#shareNote');
-  try {
-    if (navigator.share) { await navigator.share(data); return; }
-    await navigator.clipboard.writeText(data.url);
-    note.textContent = 'Link copied. Send it to your crew.';
-  } catch (er) { if (er && er.name !== 'AbortError') note.textContent = 'gangsters.com, send it to your crew.'; }
-});
 
-/* ===== legal ===== */
+/* legal */
 const legal = { terms: $('#termsModal'), privacy: $('#privacyModal') };
-$$('[data-legal]').forEach(b => b.addEventListener('click', () => { const d = legal[b.dataset.legal]; if (d && !d.open) { d.showModal(); lockScroll(); } }));
+$$('[data-legal]').forEach(b => b.addEventListener('click', () => { const d = legal[b.dataset.legal]; if (d && !d.open) { d.showModal(); lock(); } }));
 $$('[data-legal-close]').forEach(b => b.addEventListener('click', () => b.closest('dialog').close()));
 })();
 </script>
